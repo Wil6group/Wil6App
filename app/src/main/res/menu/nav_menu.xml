@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+<!--    If more options needed in the menu add below and then add in scroll options activity or message me(Shivaar) and ill add the navigation..-->
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_home_black_24dp"
+            android:title="Home" />
+
+        <item android:title="Learn">
+        <menu>
+        <item
+            android:id="@+id/nav_animal"
+            android:icon="@drawable/ic_pets_black_24dp"
+            android:title="Animals" />
+        <item
+            android:id="@+id/nav_Body"
+            android:icon="@drawable/ic_accessibility_black_24dp"
+            android:title="Body" />
+        <item
+            android:id="@+id/nav_colour"
+            android:icon="@drawable/ic_color_lens_black_24dp"
+            android:title="Colours" />
+        <item
+            android:id="@+id/nav_number"
+            android:icon="@drawable/ic_looks_one_black_24dp"
+            android:title="Numbers" />
+        <item
+            android:id="@+id/nav_shapes"
+            android:icon="@drawable/shapesicon"
+            android:title="Shapes" />
+        </menu>
+        </item>
+    </group>
+
+
+    <item android:title="Games">
+        <menu>
+            <item
+                android:id="@+id/nav_picMatch"
+                android:icon="@drawable/ic_baseline_videogame_asset_24"
+                android:title="Picture Matching Game" />
+            <item
+                android:id="@+id/nav_anagram"
+                android:icon="@drawable/ic_baseline_videogame_asset_24"
+                android:title="Anagram Game" />
+        </menu>
+    </item>
+
+    <item android:title="Parent Portal">
+        <menu>
+            <item
+                android:id="@+id/nav_portal"
+                android:icon="@drawable/ic_wc_black_24dp"
+                android:title="Profile" />
+        </menu>
+    </item>
+</menu>

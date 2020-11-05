@@ -1,0 +1,77 @@
+{
+  "project_info": {
+    "project_number": "144490278377",
+    "firebase_url": "https://appproto02.firebaseio.com",
+    "project_id": "appproto02",
+    "storage_bucket": "appproto02.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:144490278377:android:638fbf69102a6fcab2af78",
+        "android_client_info": {
+          "package_name": "com.example.app_proto_02"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "144490278377-5ufelnmrr8674omnnslvjftghljru7nm.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.app_proto_02",
+            "certificate_hash": "b35ec34234bba7b7374e913cfa374039bb4102e2"
+          }
+        },
+        {
+          "client_id": "144490278377-siraiaun9biopumnep3i5nctvpvsth71.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAMffr2CMcQY9rnFdPf2t6onYtHUy4apco"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "144490278377-siraiaun9biopumnep3i5nctvpvsth71.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:144490278377:android:87421ab62a2d6303b2af78",
+        "android_client_info": {
+          "package_name": "com.example.loginproto"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "144490278377-siraiaun9biopumnep3i5nctvpvsth71.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAMffr2CMcQY9rnFdPf2t6onYtHUy4apco"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "144490278377-siraiaun9biopumnep3i5nctvpvsth71.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
