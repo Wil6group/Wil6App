@@ -11,71 +11,95 @@ import android.media.AudioManager;
 import android.media.SoundPool;
 import android.os.Build;
 import android.os.Bundle;
+import android.speech.tts.TextToSpeech;
 import android.view.View;
+import android.widget.Toast;
+
+import java.util.Locale;
 
 public class animals extends AppCompatActivity {
 
-    private SoundPool soundPool;
-    private int bird, bee, butterfly, cat, dog, chicken, sheep, fish;
+    TextToSpeech t1;
+    String word;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_animals);
 
-        //---Animal audio
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            AudioAttributes audioAttributes = new AudioAttributes.Builder()
-                    .setUsage(AudioAttributes.USAGE_ASSISTANCE_SONIFICATION)
-                    .setContentType(AudioAttributes.CONTENT_TYPE_SONIFICATION)
-                    .build();
-            soundPool = new SoundPool.Builder()
-                    .setMaxStreams(10)
-                    .setAudioAttributes(audioAttributes)
-                    .build();
-        } else {
-            soundPool = new SoundPool(10, AudioManager.STREAM_MUSIC, 0);
-        }
-
-        //bird = soundPool.load(this, R.raw.bird, 1);
+        //Speech
+        t1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+            @Override
+            public void onInit(int status) {
+                if(status!=TextToSpeech.ERROR)
+                {
+                    t1.setLanguage(Locale.UK);
+                }
+            }
+        });
 
     }
 
     //---Animals button click
     public void Bird(View view)
     {
-        //soundPool.play(bird, 1,1, 0, 0, 1);
+        word = "bird";
+        String toSpeak = word;
+        t1.speak(toSpeak, TextToSpeech.QUEUE_FLUSH, null);
     }
     public void Bee(View view)
     {
-
+        word = "bee";
+        String toSpeak = word;
+        t1.speak(toSpeak, TextToSpeech.QUEUE_FLUSH, null);
     }
     public void Butterfly(View view)
     {
-
+        word = "butterfly";
+        String toSpeak = word;
+        t1.speak(toSpeak, TextToSpeech.QUEUE_FLUSH, null);
     }
     public void Cat(View view)
     {
-
+        word = "cat";
+        String toSpeak = word;
+        t1.speak(toSpeak, TextToSpeech.QUEUE_FLUSH, null);
     }
     public void Dog(View view)
     {
-
+        word = "dog";
+        String toSpeak = word;
+        t1.speak(toSpeak, TextToSpeech.QUEUE_FLUSH, null);
     }
     public void Chicken(View view)
     {
-
+        word = "chicken";
+        String toSpeak = word;
+        t1.speak(toSpeak, TextToSpeech.QUEUE_FLUSH, null);
     }
     public void Sheep(View view)
     {
-
+        word = "sheep";
+        String toSpeak = word;
+        t1.speak(toSpeak, TextToSpeech.QUEUE_FLUSH, null);
     }
     public void Fish(View view)
     {
-
+        word = "fish";
+        String toSpeak = word;
+        t1.speak(toSpeak, TextToSpeech.QUEUE_FLUSH, null);
     }
     public void onBackClick(View view) {
-        startActivity(new Intent(animals.this, scroll_options.class));
+        startActivity(new Intent(animals.this, animalsOptions.class));
     }
-    //---Animals button click end
+    public void onPause()
+    {
+        if(t1!=null)
+        {
+            t1.stop();
+            t1.shutdown();
+        }
+        super.onPause();
+    }
+
 }

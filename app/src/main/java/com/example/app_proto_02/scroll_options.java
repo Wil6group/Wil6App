@@ -29,31 +29,30 @@ public class scroll_options extends AppCompatActivity implements NavigationView.
         navView();
     }
 
-    //---Scroll options to open sections---Shaun
-    public void Camera(View view)
+    //---Scroll options to open sections---
+    public void onCameraClick(View view)
     {
         startActivity(new Intent(scroll_options.this, GalleryActivity.class));
     }
-    public void Colours(View view)
+    public void onColourOptionsClick(View view)
     {
-        startActivity(new Intent(scroll_options.this, colours.class));
+        startActivity(new Intent(scroll_options.this, coloursOptions.class));
     }
-    public void Numbers(View view)
+    public void onNumbersOptionsClick(View view)
     {
-        startActivity(new Intent(scroll_options.this, numbers.class));
+        startActivity(new Intent(scroll_options.this, numbersOptions.class));
     }
-    public void Animals(View view)
+    public void onAnimalsOptionsClick(View view)
     {
-        startActivity(new Intent(scroll_options.this, animals.class));
+        startActivity(new Intent(scroll_options.this, animalsOptions.class));
     }
-
-    public void Shapes(View view)
+    public void onShapesOptionsClick(View view)
     {
-        startActivity(new Intent(scroll_options.this,shapes.class));
+        startActivity(new Intent(scroll_options.this,shapesOptions.class));
     }
-    public void Body(View view)
+    public void onBodyOptionsClick(View view)
     {
-        startActivity(new Intent(scroll_options.this,body.class));
+        startActivity(new Intent(scroll_options.this,bodyOptions.class));
     }
     //---Scroll options end
 

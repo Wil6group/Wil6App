@@ -6,9 +6,15 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 import android.content.Intent;
 import android.graphics.drawable.AnimationDrawable;
 import android.os.Bundle;
+import android.speech.tts.TextToSpeech;
 import android.view.View;
 
+import java.util.Locale;
+
 public class body extends AppCompatActivity {
+
+    TextToSpeech t1;
+    String word;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,45 +26,85 @@ public class body extends AppCompatActivity {
         //animationDrawable.setEnterFadeDuration(2000);                                                 //Gradient background
         //animationDrawable.setExitFadeDuration(4000);                                                  //Gradient background
         //animationDrawable.start();                                                                    //Gradient background
+
+        //Speech
+        t1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+            @Override
+            public void onInit(int status) {
+                if(status!=TextToSpeech.ERROR)
+                {
+                    t1.setLanguage(Locale.UK);
+                }
+            }
+        });
+
     }
     public void onBackClick(View view)
     {
-        startActivity(new Intent(body.this, scroll_options.class));
+        startActivity(new Intent(body.this, bodyOptions.class));
     }
 
-    public void Part1(View view)
+    public void Head(View view)
     {
-
+        word = "head";
+        String toSpeak = word;
+        t1.speak(toSpeak, TextToSpeech.QUEUE_FLUSH, null);
     }
-    public void Part2(View view)
+    public void Neck(View view)
     {
-
-    }public void Part3(View view)
+        word = "neck";
+        String toSpeak = word;
+        t1.speak(toSpeak, TextToSpeech.QUEUE_FLUSH, null);
+    }public void Arm(View view)
     {
-
-    }public void Part4(View view)
+        word = "arm";
+        String toSpeak = word;
+        t1.speak(toSpeak, TextToSpeech.QUEUE_FLUSH, null);
+    }public void Hand(View view)
     {
-
-    }public void Part5(View view)
+        word = "hand";
+        String toSpeak = word;
+        t1.speak(toSpeak, TextToSpeech.QUEUE_FLUSH, null);
+    }public void Chest(View view)
     {
-
-    }public void Part6(View view)
+        word = "chest";
+        String toSpeak = word;
+        t1.speak(toSpeak, TextToSpeech.QUEUE_FLUSH, null);
+    }public void Stomach(View view)
     {
-
-    }public void Part7(View view)
+        word = "stomach";
+        String toSpeak = word;
+        t1.speak(toSpeak, TextToSpeech.QUEUE_FLUSH, null);
+    }public void Leg(View view)
     {
-
-    }public void Part8(View view)
+        word = "leg";
+        String toSpeak = word;
+        t1.speak(toSpeak, TextToSpeech.QUEUE_FLUSH, null);
+    }public void Knee(View view)
     {
-
+        word = "knee";
+        String toSpeak = word;
+        t1.speak(toSpeak, TextToSpeech.QUEUE_FLUSH, null);
     }
-    public void Part9(View view)
+    public void Foot(View view)
     {
-
+        word = "foot";
+        String toSpeak = word;
+        t1.speak(toSpeak, TextToSpeech.QUEUE_FLUSH, null);
     }
-    public void Part10(View view)
+    public void Toes(View view)
     {
-
+        word = "toes";
+        String toSpeak = word;
+        t1.speak(toSpeak, TextToSpeech.QUEUE_FLUSH, null);
     }
-
+    public void onPause()
+    {
+        if(t1!=null)
+        {
+            t1.stop();
+            t1.shutdown();
+        }
+        super.onPause();
+    }
 }

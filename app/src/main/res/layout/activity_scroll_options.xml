@@ -5,129 +5,199 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".scroll_options"
-    android:background="@drawable/bg3"
+    android:background="@drawable/bg1"
     android:id="@+id/ScrollDrawer">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-    <ScrollView
-        android:id="@+id/scrollView1"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="-333dp"
-        android:scrollbars="none">
-
-        <LinearLayout
-            android:layout_width="match_parent"
+        <ScrollView
+            android:layout_width="409dp"
             android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:paddingTop="15dp"
-            android:paddingBottom="10dp"
-            android:paddingLeft="15dp"
-            android:paddingRight="10dp">
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0">
 
-
-            <TextView
-                android:id="@+id/textView"
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Camera"
-                android:textColor="@color/black"
-                android:textSize="30sp"
-                android:textStyle="bold" />
+                android:orientation="vertical">
 
-            <Button
-                android:id="@+id/button2"
-                android:layout_width="380dp"
-                android:layout_height="200dp"
-                android:onClick="Camera"
-                android:background="@drawable/camera"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Choose any of the below"
+                    android:textStyle="bold"
+                    android:textSize="30dp"
+                    android:textColor="@color/DeepPurple"
+                    android:layout_gravity="center_horizontal"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
 
-            <TextView
-                android:id="@+id/textView2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Shapes"
-                android:textColor="@color/black"
-                android:textSize="30sp"
-                android:textStyle="bold" />
+                    <ImageButton
+                        android:id="@+id/button1"
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:layout_marginLeft="40dp"
+                        android:background="@drawable/rounded_button_3"
+                        android:padding="10dp"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/camera"
+                        android:onClick="onCameraClick"/>
 
-            <Button
-                android:id="@+id/button3"
-                android:layout_width="380dp"
-                android:layout_height="200dp"
-                android:onClick="Shapes"
-                android:background="@drawable/shapes"/>
+                    <ImageButton
+                        android:id="@+id/button2"
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:layout_marginLeft="25dp"
+                        android:background="@drawable/rounded_button_3"
+                        android:padding="10dp"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/animals"
+                        android:onClick="onAnimalsOptionsClick"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Camera"
+                        android:textStyle="bold"
+                        android:textSize="30dp"
+                        android:textColor="@color/DeepPurple"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginLeft="65dp"/>
 
-            <TextView
-                android:id="@+id/textView3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Numbers"
-                android:textColor="@color/black"
-                android:textSize="30sp"
-                android:textStyle="bold" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Animals"
+                        android:textStyle="bold"
+                        android:textSize="30dp"
+                        android:textColor="@color/DeepPurple"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginLeft="65dp"/>
+                </LinearLayout>
 
-            <Button
-                android:id="@+id/button4"
-                android:layout_width="380dp"
-                android:layout_height="200dp"
-                android:onClick="Numbers"
-                android:background="@drawable/numbers"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="15dp">
 
-            <TextView
-                android:id="@+id/textView4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Colours"
-                android:textColor="@color/black"
-                android:textSize="30sp"
-                android:textStyle="bold" />
+                    <ImageButton
+                        android:id="@+id/button3"
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:layout_marginLeft="40dp"
+                        android:background="@drawable/rounded_button_3"
+                        android:padding="10dp"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/shapes"
+                        android:onClick="onShapesOptionsClick"/>
 
-            <Button
-                android:id="@+id/button5"
-                android:layout_width="380dp"
-                android:layout_height="200dp"
-                android:onClick="Colours"
-                android:background="@drawable/colour"/>
+                    <ImageButton
+                        android:id="@+id/button4"
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:layout_marginLeft="25dp"
+                        android:background="@drawable/rounded_button_3"
+                        android:padding="10dp"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/body"
+                        android:onClick="onBodyOptionsClick"/>/>
+                </LinearLayout>
 
-            <TextView
-                android:id="@+id/textView5"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Body"
-                android:textColor="@color/black"
-                android:textSize="30sp"
-                android:textStyle="bold" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Shapes"
+                        android:textStyle="bold"
+                        android:textSize="30dp"
+                        android:textColor="@color/DeepPurple"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginLeft="65dp"/>
 
-            <Button
-                android:id="@+id/button6"
-                android:layout_width="380dp"
-                android:layout_height="200dp"
-                android:onClick="Body"
-                android:background="@drawable/body"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Body"
+                        android:textStyle="bold"
+                        android:textSize="30dp"
+                        android:textColor="@color/DeepPurple"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginLeft="90dp"/>
+                </LinearLayout>
 
-            <TextView
-                android:id="@+id/textView6"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Animals"
-                android:textColor="@color/black"
-                android:textSize="30sp"
-                android:textStyle="bold" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="15dp">
 
-            <Button
-                android:id="@+id/button7"
-                android:layout_width="380dp"
-                android:layout_height="200dp"
-                android:onClick="Animals"
-                android:background="@drawable/animals"/>
+                    <ImageButton
+                        android:id="@+id/button5"
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:layout_marginLeft="40dp"
+                        android:background="@drawable/rounded_button_3"
+                        android:padding="10dp"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/colours"
+                        android:onClick="onColourOptionsClick"/>/>
 
-        </LinearLayout>
-    </ScrollView>
+                    <ImageButton
+                        android:id="@+id/button6"
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:layout_marginLeft="25dp"
+                        android:background="@drawable/rounded_button_3"
+                        android:padding="10dp"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/numbers"
+                        android:onClick="onNumbersOptionsClick"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Colours"
+                        android:textStyle="bold"
+                        android:textSize="30dp"
+                        android:textColor="@color/DeepPurple"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginLeft="65dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Numbers"
+                        android:textStyle="bold"
+                        android:textSize="30dp"
+                        android:textColor="@color/DeepPurple"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginLeft="60dp"/>
+                </LinearLayout>
+
+            </LinearLayout>
+        </ScrollView>
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <com.google.android.material.navigation.NavigationView

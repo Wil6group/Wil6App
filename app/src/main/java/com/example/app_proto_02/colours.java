@@ -10,13 +10,15 @@ import android.media.AudioManager;
 import android.media.SoundPool;
 import android.os.Build;
 import android.os.Bundle;
+import android.speech.tts.TextToSpeech;
 import android.view.View;
+
+import java.util.Locale;
 
 public class colours extends AppCompatActivity {
 
-    //Colour audio
-    private SoundPool soundPool;
-    private int blue, red, yellow, green, purple, pink, orange, brown, black, grey;
+    TextToSpeech t1;
+    String word;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,71 +31,102 @@ public class colours extends AppCompatActivity {
         //animationDrawable.setExitFadeDuration(4000);                                                  //Gradient background
         //animationDrawable.start();
 
-        //---Colour audio
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            AudioAttributes audioAttributes = new AudioAttributes.Builder()
-                    .setUsage(AudioAttributes.USAGE_ASSISTANCE_SONIFICATION)
-                    .setContentType(AudioAttributes.CONTENT_TYPE_SONIFICATION)
-                    .build();
-            soundPool = new SoundPool.Builder()
-                    .setMaxStreams(10)
-                    .setAudioAttributes(audioAttributes)
-                    .build();
-        } else {
-            soundPool = new SoundPool(10, AudioManager.STREAM_MUSIC, 0);
-        }
+        //Speech
+        t1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+            @Override
+            public void onInit(int status) {
+                if(status!=TextToSpeech.ERROR)
+                {
+                    t1.setLanguage(Locale.UK);
+                }
+            }
+        });
 
-        blue = soundPool.load(this, R.raw.blue, 1);
     }
 
     //---Colours button click
     public void Blue(View view)
     {
-        soundPool.play(blue, 1,1, 0, 0, 1);
+        word = "blue";
+        String toSpeak = word;
+        t1.speak(toSpeak, TextToSpeech.QUEUE_FLUSH, null);
     }
     public void Red(View view)
     {
-
+        word = "red";
+        String toSpeak = word;
+        t1.speak(toSpeak, TextToSpeech.QUEUE_FLUSH, null);
     }
     public void Yellow(View view)
     {
-
+        word = "yellow";
+        String toSpeak = word;
+        t1.speak(toSpeak, TextToSpeech.QUEUE_FLUSH, null);
     }public void Green(View view)
     {
-
-    }public void Purple(View view)
-    {
-
+        word = "green";
+        String toSpeak = word;
+        t1.speak(toSpeak, TextToSpeech.QUEUE_FLUSH, null);
     }
     public void Pink(View view)
     {
-
+        word = "pink";
+        String toSpeak = word;
+        t1.speak(toSpeak, TextToSpeech.QUEUE_FLUSH, null);
     }
     public void Orange(View view)
     {
-
+        word = "orange";
+        String toSpeak = word;
+        t1.speak(toSpeak, TextToSpeech.QUEUE_FLUSH, null);
     }
     public void Brown(View view)
     {
-
+        word = "brown";
+        String toSpeak = word;
+        t1.speak(toSpeak, TextToSpeech.QUEUE_FLUSH, null);
     }
     public void Black(View view)
     {
-
+        word = "black";
+        String toSpeak = word;
+        t1.speak(toSpeak, TextToSpeech.QUEUE_FLUSH, null);
+    }
+    public void Purple(View view)
+    {
+        word = "purple";
+        String toSpeak = word;
+        t1.speak(toSpeak, TextToSpeech.QUEUE_FLUSH, null);
     }
     public void Grey(View view)
     {
-
+        word = "grey";
+        String toSpeak = word;
+        t1.speak(toSpeak, TextToSpeech.QUEUE_FLUSH, null);
+    }
+    public void LightBlue(View view)
+    {
+        word = "light blue";
+        String toSpeak = word;
+        t1.speak(toSpeak, TextToSpeech.QUEUE_FLUSH, null);
+    }
+    public void LightGreen(View view)
+    {
+        word = "light green";
+        String toSpeak = word;
+        t1.speak(toSpeak, TextToSpeech.QUEUE_FLUSH, null);
     }
     public void onBackClick(View view)
     {
-        startActivity(new Intent(colours.this, scroll_options.class));
+        startActivity(new Intent(colours.this, coloursOptions.class));
     }
-
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
-        soundPool.release();
-        soundPool = null;
+    public void onPause()
+    {
+        if(t1!=null)
+        {
+            t1.stop();
+            t1.shutdown();
+        }
+        super.onPause();
     }
 }

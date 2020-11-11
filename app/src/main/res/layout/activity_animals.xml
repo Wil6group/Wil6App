@@ -8,121 +8,267 @@
     android:background="@drawable/bg4"
     android:id="@+id/AnimalActivity">
 
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Animals"
-        android:textColor="@color/text"
-        android:textSize="38dp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.102"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
 
-    <Button
-        android:id="@+id/btnBack"
-        android:layout_width="140dp"
-        android:layout_height="50dp"
-        android:background="@drawable/rounded_button2"
-        android:onClick="onBackClick"
-        android:text="Back"
-        android:textAllCaps="false"
-        android:textSize="22dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginTop="10dp"
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Animals"
+            android:textStyle="bold"
+            android:textSize="42dp"
+            android:textColor="@color/DeepPurple"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="40dp"/>
+
+        <Button
+            android:id="@+id/Back"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:background="@drawable/rounded_button_3"
+            android:text="Back"
+            android:textSize="32dp"
+            android:textStyle="bold"
+            android:textColor="@color/DeepPurple"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="25dp"
+            android:layout_alignParentRight="true"
+            android:onClick="onBackClick"/>
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="409dp"
+        android:layout_height="match_parent"
+        android:layout_marginTop="70dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <ScrollView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:scrollbars="none">
+        app:layout_constraintVertical_bias="0.0">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:paddingLeft="15dp"
-            android:paddingTop="15dp"
-            android:paddingRight="10dp"
-            android:paddingBottom="10dp">
-
-        <Button
-            android:id="@+id/btnBird"
-            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:onClick="Bird"
-            android:background="@drawable/bird"
-            android:layout_marginTop="50dp"
-            android:layout_marginBottom="25dp"/>
+            android:orientation="vertical">
 
-            <Button
-                android:id="@+id/btnBee"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:onClick="Bee"
-                android:background="@drawable/bee"
-                android:layout_marginBottom="25dp"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
 
-            <Button
-                android:id="@+id/btnButterfly"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:onClick="Butterfly"
-                android:background="@drawable/butterfly"
-                android:layout_marginBottom="25dp"/>
+                <ImageButton
+                    android:id="@+id/button1"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_marginLeft="40dp"
+                    android:background="@drawable/rounded_button_3"
+                    android:padding="10dp"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/bee"
+                    android:onClick="Bee"/>
 
-            <Button
-                android:id="@+id/btnCat"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:onClick="Cat"
-                android:background="@drawable/cat"
-                android:layout_marginBottom="25dp"/>
+                <ImageButton
+                    android:id="@+id/button2"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_marginLeft="25dp"
+                    android:background="@drawable/rounded_button_3"
+                    android:padding="10dp"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/bird"
+                    android:onClick="Bird"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
 
-            <Button
-                android:id="@+id/btnDog"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:onClick="Dog"
-                android:background="@drawable/dog"
-                android:layout_marginBottom="25dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Bee"
+                    android:textStyle="bold"
+                    android:textSize="30dp"
+                    android:textColor="@color/DeepPurple"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginLeft="90dp"/>
 
-            <Button
-                android:id="@+id/btnChicken"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:onClick="Chicken"
-                android:background="@drawable/chicken"
-                android:layout_marginBottom="25dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Bird"
+                    android:textStyle="bold"
+                    android:textSize="30dp"
+                    android:textColor="@color/DeepPurple"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginLeft="125dp"/>
+            </LinearLayout>
 
-            <Button
-                android:id="@+id/btnSheep"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:onClick="Sheep"
-                android:background="@drawable/sheep"
-                android:layout_marginBottom="25dp"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
 
-            <Button
-                android:id="@+id/btnFish"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:onClick="Fish"
-                android:background="@drawable/fish"
-                android:layout_marginBottom="25dp"/>
+                <ImageButton
+                    android:id="@+id/button3"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_marginLeft="40dp"
+                    android:background="@drawable/rounded_button_3"
+                    android:padding="10dp"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/cat"
+                    android:onClick="Cat"/>
+
+                <ImageButton
+                    android:id="@+id/button4"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_marginLeft="25dp"
+                    android:background="@drawable/rounded_button_3"
+                    android:padding="10dp"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/chicken"
+                    android:onClick="Chicken"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Cat"
+                    android:textStyle="bold"
+                    android:textSize="30dp"
+                    android:textColor="@color/DeepPurple"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginLeft="95dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Chicken"
+                    android:textStyle="bold"
+                    android:textSize="30dp"
+                    android:textColor="@color/DeepPurple"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginLeft="95dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/button5"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_marginLeft="40dp"
+                    android:background="@drawable/rounded_button_3"
+                    android:padding="10dp"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/dog"
+                    android:onClick="Dog"/>
+
+                <ImageButton
+                    android:id="@+id/button6"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_marginLeft="25dp"
+                    android:background="@drawable/rounded_button_3"
+                    android:padding="10dp"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/fish"
+                    android:onClick="Fish"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Dog"
+                    android:textStyle="bold"
+                    android:textSize="30dp"
+                    android:textColor="@color/DeepPurple"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginLeft="95dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Fish"
+                    android:textStyle="bold"
+                    android:textSize="30dp"
+                    android:textColor="@color/DeepPurple"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginLeft="120dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/button7"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_marginLeft="40dp"
+                    android:background="@drawable/rounded_button_3"
+                    android:padding="10dp"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/sheep"
+                    android:onClick="Sheep"/>
+
+                <ImageButton
+                    android:id="@+id/button8"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_marginLeft="25dp"
+                    android:background="@drawable/rounded_button_3"
+                    android:padding="10dp"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/butterfly"
+                    android:onClick="Butterfly"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sheep"
+                    android:textStyle="bold"
+                    android:textSize="30dp"
+                    android:textColor="@color/DeepPurple"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginLeft="80dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Butterfly"
+                    android:textStyle="bold"
+                    android:textSize="30dp"
+                    android:textColor="@color/DeepPurple"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginLeft="80dp"/>
+
+            </LinearLayout>
+
         </LinearLayout>
     </ScrollView>
 

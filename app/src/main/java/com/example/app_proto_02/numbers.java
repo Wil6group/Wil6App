@@ -25,7 +25,7 @@ public class numbers extends AppCompatActivity {
 
     public void onBackClick(View view)
     {
-        startActivity(new Intent(numbers.this, scroll_options.class));
+        startActivity(new Intent(numbers.this, numbersOptions.class));
     }
 
     public void onAdditionClick(View v){
