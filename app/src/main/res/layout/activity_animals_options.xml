@@ -4,45 +4,50 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".shapesOptions"
+    tools:context=".animalsOptions"
     android:background="@drawable/bg1">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Shapes"
-            android:textStyle="bold"
-            android:textSize="42dp"
-            android:textColor="@color/DeepPurple"
             android:layout_gravity="center_horizontal"
-            android:layout_marginLeft="40dp"/>
+            android:layout_marginLeft="40dp"
+            android:text="Animals"
+            android:textColor="@color/DeepPurple"
+            android:textSize="42dp"
+            android:textStyle="bold" />
 
         <Button
             android:id="@+id/Back"
             android:layout_width="150dp"
             android:layout_height="50dp"
-            android:background="@drawable/rounded_button_3"
-            android:text="Back"
-            android:textSize="32dp"
-            android:textStyle="bold"
-            android:textColor="@color/DeepPurple"
-            android:layout_marginTop="10dp"
-            android:layout_marginLeft="50dp"
             android:layout_alignParentRight="true"
-            android:onClick="onBackClick"/>
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/rounded_button_3"
+            android:onClick="onBackClick"
+            android:text="Back"
+            android:textColor="@color/DeepPurple"
+            android:textSize="32dp"
+            android:textStyle="bold" />
 
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
         android:layout_marginTop="80dp"
+        android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -54,27 +59,28 @@
             android:id="@+id/button1"
             android:layout_width="match_parent"
             android:layout_height="150dp"
-            android:background="@drawable/rounded_button_3"
-            android:text="See Shapes"
-            android:textSize="32dp"
-            android:textStyle="bold"
-            android:textColor="@color/DeepPurple"
             android:layout_marginLeft="25dp"
             android:layout_marginRight="25dp"
-            android:onClick="onShapesClick"/>
+            android:background="@drawable/rounded_button_3"
+            android:onClick="onAnimalsClick"
+            android:text="See Animals"
+            android:textColor="@color/DeepPurple"
+            android:textSize="32dp"
+            android:textStyle="bold" />
 
         <Button
             android:id="@+id/button4"
             android:layout_width="match_parent"
             android:layout_height="150dp"
-            android:background="@drawable/rounded_button_3"
-            android:text="Test"
-            android:textSize="32dp"
-            android:textStyle="bold"
-            android:textColor="@color/DeepPurple"
             android:layout_marginLeft="25dp"
+            android:layout_marginTop="25dp"
             android:layout_marginRight="25dp"
-            android:layout_marginTop="25dp"/>
+            android:background="@drawable/rounded_button_3"
+            android:onClick="onTestClick"
+            android:text="Test"
+            android:textColor="@color/DeepPurple"
+            android:textSize="32dp"
+            android:textStyle="bold" />
 
         <Button
             android:id="@+id/button3"
@@ -84,7 +90,7 @@
             android:layout_marginTop="25dp"
             android:layout_marginRight="25dp"
             android:background="@drawable/rounded_button_3"
-            android:onClick="onShapeGameClick"
+            android:onClick="onAnimalGameClick"
             android:text="Game"
             android:textColor="@color/DeepPurple"
             android:textSize="32dp"

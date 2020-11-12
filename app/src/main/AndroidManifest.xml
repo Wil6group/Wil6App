@@ -13,7 +13,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".bodyOptions"></activity>
+        <activity android:name=".animalTest"></activity>
+        <activity android:name=".bodyOptions" />
         <activity android:name=".shapesOptions" />
         <activity android:name=".animalsOptions" />
         <activity android:name=".numbersOptions" />
@@ -23,7 +24,6 @@
         <activity android:name=".TestAnagram" />
         <activity android:name=".PicMatching" />
         <activity android:name=".shapes_test_level_1" />
-        <activity android:name=".numbers_test_level_1" />
         <activity android:name=".animals" />
         <activity android:name=".colours" />
         <activity android:name=".numbers" />

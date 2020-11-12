@@ -17,12 +17,19 @@ public class animalsOptions extends AppCompatActivity {
     {
         startActivity(new Intent(animalsOptions.this, animals.class));
     }
-    //public void onGameClick(View view)
-    //{
-        //startActivity(new Intent(animalsOptions.this, animalsGame.class));
-    //}
+    public void onAnimalGameClick(View view)
+    {
+        Intent intent = new Intent(getApplicationContext(), PicMatching.class);
+        intent.putExtra("ID", "Animals");
+        startActivity(intent);
+    }
     public void onBackClick(View view)
     {
         startActivity(new Intent(animalsOptions.this, scroll_options.class));
+    }
+
+    public void onTestClick(View view)
+    {
+        startActivity(new Intent(animalsOptions.this, animalTest.class));
     }
 }

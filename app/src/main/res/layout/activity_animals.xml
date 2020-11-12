@@ -201,7 +201,7 @@
                     android:textSize="30dp"
                     android:textColor="@color/DeepPurple"
                     android:layout_gravity="center_horizontal"
-                    android:layout_marginLeft="95dp"/>
+                    android:layout_marginLeft="90dp"/>
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -255,7 +255,7 @@
                     android:textSize="30dp"
                     android:textColor="@color/DeepPurple"
                     android:layout_gravity="center_horizontal"
-                    android:layout_marginLeft="80dp"/>
+                    android:layout_marginLeft="75dp"/>
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -265,7 +265,7 @@
                     android:textSize="30dp"
                     android:textColor="@color/DeepPurple"
                     android:layout_gravity="center_horizontal"
-                    android:layout_marginLeft="80dp"/>
+                    android:layout_marginLeft="65dp"/>
 
             </LinearLayout>
 

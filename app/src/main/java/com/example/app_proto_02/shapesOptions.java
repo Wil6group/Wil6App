@@ -17,10 +17,12 @@ public class shapesOptions extends AppCompatActivity {
     {
         startActivity(new Intent(shapesOptions.this, shapes.class));
     }
-    //public void onGameClick(View view)
-    //{
-    //startActivity(new Intent(shapesOptions.this, shapesTest.class));
-    //}
+    public void onShapeGameClick(View view)
+    {
+        Intent intent = new Intent(getApplicationContext(), PicMatching.class);
+        intent.putExtra("ID", "Animals");
+        startActivity(intent);
+    }
     public void onBackClick(View view)
     {
         startActivity(new Intent(shapesOptions.this, scroll_options.class));
