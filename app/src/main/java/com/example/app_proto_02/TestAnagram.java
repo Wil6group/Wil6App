@@ -68,6 +68,7 @@ public class TestAnagram extends AppCompatActivity {
                     newGame();
                 } else{
                     tv_info.setText("Try again");
+                    et_guess.setText("");
                 }
             }
         });

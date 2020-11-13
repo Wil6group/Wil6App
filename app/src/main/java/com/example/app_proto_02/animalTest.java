@@ -14,7 +14,7 @@ import java.util.Random;
 public class animalTest extends AppCompatActivity {
 
     int[] animalImageList = new int[]{R.drawable.bee, R.drawable.bird, R.drawable.cat, R.drawable.chicken, R.drawable.dog, R.drawable.fish, R.drawable.sheep, R.drawable.butterfly};
-    String[] animalNameList = new String[]{"BEE","BIRD","CAT","CHICKEN","DOG","FISH","SHEEP","BUTTERFLY"};
+    String[] animalNameList = new String[]{"BEE","BIRD","CAT","CHICKEN","DOG","FISH","SHEEP","BUTTERFLY","GOAT","LION"};
 
     ImageView question;
     Button b1,b2,b3;
@@ -72,17 +72,17 @@ public class animalTest extends AppCompatActivity {
         if (randAns == 1)
         {
             b1.setText(animalNameList[answerPos]);
-            b2.setText(animalNameList[randNum()]);
-            b3.setText(animalNameList[randNum()]);
+            b2.setText(animalNameList[answerPos+1]);
+            b3.setText(animalNameList[answerPos+2]);
         }else if (randAns == 2)
         {
-            b1.setText(animalNameList[randNum()]);
+            b1.setText(animalNameList[answerPos+1]);
             b2.setText(animalNameList[answerPos]);
-            b3.setText(animalNameList[randNum()]);
+            b3.setText(animalNameList[answerPos+2]);
         }else
             {
-                b1.setText(animalNameList[randNum()]);
-                b2.setText(animalNameList[randNum()]);
+                b1.setText(animalNameList[answerPos+1]);
+                b2.setText(animalNameList[answerPos+2]);
                 b3.setText(animalNameList[answerPos]);
             }
     }

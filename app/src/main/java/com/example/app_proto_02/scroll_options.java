@@ -121,6 +121,11 @@ public class scroll_options extends AppCompatActivity implements NavigationView.
         if (id == R.id.nav_portal)
         {
         }
+        if (id == R.id.nav_logout)
+        {
+            finishAffinity();
+            System.exit(0);
+        }
         return false;
     }
 

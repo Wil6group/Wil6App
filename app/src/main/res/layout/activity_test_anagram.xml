@@ -16,6 +16,7 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:text="Guess the word!"
+        android:textColor="@color/Black"
         app:layout_constraintBottom_toTopOf="@+id/tv_word"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

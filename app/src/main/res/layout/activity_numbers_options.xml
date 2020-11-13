@@ -64,19 +64,6 @@
             android:onClick="onNumbersClick"/>
 
         <Button
-            android:id="@+id/button4"
-            android:layout_width="match_parent"
-            android:layout_height="150dp"
-            android:background="@drawable/rounded_button_3"
-            android:text="Test"
-            android:textSize="32dp"
-            android:textStyle="bold"
-            android:textColor="@color/DeepPurple"
-            android:layout_marginLeft="25dp"
-            android:layout_marginRight="25dp"
-            android:layout_marginTop="25dp"/>
-
-        <Button
             android:id="@+id/button3"
             android:layout_width="match_parent"
             android:layout_height = "150dp"
