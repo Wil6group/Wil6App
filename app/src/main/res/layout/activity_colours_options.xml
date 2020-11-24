@@ -67,14 +67,15 @@
             android:id="@+id/button4"
             android:layout_width="match_parent"
             android:layout_height="150dp"
-            android:background="@drawable/rounded_button_3"
-            android:text="Test"
-            android:textSize="32dp"
-            android:textStyle="bold"
-            android:textColor="@color/DeepPurple"
             android:layout_marginLeft="25dp"
+            android:layout_marginTop="25dp"
             android:layout_marginRight="25dp"
-            android:layout_marginTop="25dp"/>
+            android:background="@drawable/rounded_button_3"
+            android:onClick="onTestClick"
+            android:text="Test"
+            android:textColor="@color/DeepPurple"
+            android:textSize="32dp"
+            android:textStyle="bold" />
 
         <Button
             android:id="@+id/button3"

@@ -21,6 +21,10 @@ public class coloursOptions extends AppCompatActivity {
     //{
     //startActivity(new Intent(coloursOptions.this, colourTest.class));
     //}
+    public void onTestClick(View view)
+    {
+        startActivity(new Intent(coloursOptions.this, colourTest.class));
+    }
     public void onBackClick(View view)
     {
         startActivity(new Intent(coloursOptions.this, scroll_options.class));

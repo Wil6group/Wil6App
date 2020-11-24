@@ -25,4 +25,8 @@ public class bodyOptions extends AppCompatActivity {
     {
         startActivity(new Intent(bodyOptions.this, scroll_options.class));
     }
+    public void onBodyTestClick(View view)
+    {
+        startActivity(new Intent(bodyOptions.this, bodyTest.class));
+    }
 }

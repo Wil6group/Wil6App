@@ -28,12 +28,6 @@ public class PicMatching extends AppCompatActivity { //Pic matching done by Shiv
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pic_matching);
 
-        //RelativeLayout PicMatchView = findViewById(R.id.PicMatchActivity);                            //Gradient background
-        //AnimationDrawable animationDrawable = (AnimationDrawable) PicMatchView.getBackground();       //Gradient background
-        //animationDrawable.setEnterFadeDuration(2000);                                                 //Gradient background
-        //animationDrawable.setExitFadeDuration(4000);                                                  //Gradient background
-        //animationDrawable.start();                                                                    //Gradient background
-
         Intent intent = getIntent();
         choice = intent.getStringExtra("ID");
          if (choice.equals("Animals"))

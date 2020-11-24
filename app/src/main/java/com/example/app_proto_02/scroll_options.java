@@ -116,7 +116,7 @@ public class scroll_options extends AppCompatActivity implements NavigationView.
         }
         if (id == R.id.nav_anagram)
         {
-            startActivity(new Intent(scroll_options.this, TestAnagram.class));
+            startActivity(new Intent(scroll_options.this, anagramMenu.class));
         }
         if (id == R.id.nav_portal)
         {

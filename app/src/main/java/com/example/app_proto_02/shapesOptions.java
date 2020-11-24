@@ -23,6 +23,10 @@ public class shapesOptions extends AppCompatActivity {
         intent.putExtra("ID", "Shapes");
         startActivity(intent);
     }
+    public void onShapesTestClick(View view)
+    {
+        startActivity(new Intent(shapesOptions.this, shapesTest.class));
+    }
     public void onBackClick(View view)
     {
         startActivity(new Intent(shapesOptions.this, scroll_options.class));

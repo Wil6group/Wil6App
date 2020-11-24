@@ -13,7 +13,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".animalTest"></activity>
+        <activity android:name=".anagramMenu"></activity>
+        <activity android:name=".bodyTest" />
+        <activity android:name=".shapesTest" />
+        <activity android:name=".colourTest" />
+        <activity android:name=".animalTest" />
         <activity android:name=".bodyOptions" />
         <activity android:name=".shapesOptions" />
         <activity android:name=".animalsOptions" />

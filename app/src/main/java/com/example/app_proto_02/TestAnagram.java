@@ -26,21 +26,9 @@ public class TestAnagram extends AppCompatActivity {
 
     Random r;
 
-    String currentWord;
+    String currentWord,choice;
 //Dictionary function used for the words, more can be added.
-    String[] dictionary = {
-            "one",
-            "two",
-            "three",
-            "four",
-            "five",
-            "six",
-            "seven",
-            "eight",
-            "nine",
-            "ten"
-
-    };
+    String[] dictionary = {"", "", "", "", "", "", "", ""};
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -53,6 +41,24 @@ public class TestAnagram extends AppCompatActivity {
 
         b_check = (Button) findViewById(R.id.b_check);
         b_new = (Button) findViewById(R.id.b_new);
+
+        Intent intent = getIntent();
+        choice = intent.getStringExtra("ID");
+        if (choice.equals("Animals"))
+        {
+            setAniPics();
+        }else if (choice.equals("Shapes"))
+        {
+            setShapePics();
+        }else if (choice.equals("Colours"))
+        {
+            setColourPics();
+        }else if (choice.equals("Numbers"))
+        {
+            setNumberPics();
+        }
+
+
 
         r = new Random();
 
@@ -105,6 +111,51 @@ public class TestAnagram extends AppCompatActivity {
 
     public void onBackClick(View view)
     {
-        startActivity(new Intent(TestAnagram.this, scroll_options.class));
+        startActivity(new Intent(TestAnagram.this, anagramMenu.class));
+    }
+
+    public void setNumberPics()
+    {
+        dictionary[0] = "one";
+        dictionary[1] = "two";
+        dictionary[2] = "three";
+        dictionary[3] = "four";
+        dictionary[4] = "five";
+        dictionary[5] = "six";
+        dictionary[6] = "seven";
+        dictionary[7] = "eight";
+    }
+    public void setColourPics()
+    {
+        dictionary[0] = "blue";
+        dictionary[1] = "red";
+        dictionary[2] = "orange";
+        dictionary[3] = "yellow";
+        dictionary[4] = "green";
+        dictionary[5] = "purple";
+        dictionary[6] = "brown";
+        dictionary[7] = "grey";
+    }
+    public void setShapePics()
+    {
+        dictionary[0] = "square";
+        dictionary[1] = "circle";
+        dictionary[2] = "triangle";
+        dictionary[3] = "star";
+        dictionary[4] = "rectangle";
+        dictionary[5] = "diamond";
+        dictionary[6] = "oval";
+        dictionary[7] = "heart";
+    }
+    public void setAniPics()
+    {
+        dictionary[0] = "dog";
+        dictionary[1] = "cat";
+        dictionary[2] = "bee";
+        dictionary[3] = "bird";
+        dictionary[4] = "chicken";
+        dictionary[5] = "fish";
+        dictionary[6] = "sheep";
+        dictionary[7] = "butterfly";
     }
 }
