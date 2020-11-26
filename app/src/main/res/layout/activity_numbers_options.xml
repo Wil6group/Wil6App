@@ -55,13 +55,14 @@
             android:layout_width="match_parent"
             android:layout_height="150dp"
             android:background="@drawable/rounded_button_3"
-            android:text="Do Maths"
+            android:text="Maths"
             android:textSize="32dp"
             android:textStyle="bold"
             android:textColor="@color/DeepPurple"
             android:layout_marginLeft="25dp"
             android:layout_marginRight="25dp"
-            android:onClick="onNumbersClick"/>
+            android:onClick="onNumbersClick"
+            android:layout_weight="1"/>
 
         <Button
             android:id="@+id/button3"
@@ -74,7 +75,8 @@
             android:textColor="@color/DeepPurple"
             android:layout_marginLeft="25dp"
             android:layout_marginRight="25dp"
-            android:layout_marginTop="25dp"/>
+            android:layout_marginTop="25dp"
+            android:layout_weight="1"/>
 
     </LinearLayout>
 

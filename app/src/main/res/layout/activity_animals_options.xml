@@ -63,10 +63,11 @@
             android:layout_marginRight="25dp"
             android:background="@drawable/rounded_button_3"
             android:onClick="onAnimalsClick"
-            android:text="See Animals"
+            android:text="Animals"
             android:textColor="@color/DeepPurple"
             android:textSize="32dp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:layout_weight="1"/>
 
         <Button
             android:id="@+id/button4"
@@ -80,7 +81,8 @@
             android:text="Test"
             android:textColor="@color/DeepPurple"
             android:textSize="32dp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:layout_weight="1"/>
 
         <Button
             android:id="@+id/button3"
@@ -94,7 +96,8 @@
             android:text="Game"
             android:textColor="@color/DeepPurple"
             android:textSize="32dp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:layout_weight="1"/>
 
     </LinearLayout>
 

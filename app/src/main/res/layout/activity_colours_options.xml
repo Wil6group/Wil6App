@@ -55,13 +55,14 @@
             android:layout_width="match_parent"
             android:layout_height="150dp"
             android:background="@drawable/rounded_button_3"
-            android:text="See Colours"
+            android:text="Colours"
             android:textSize="32dp"
             android:textStyle="bold"
             android:textColor="@color/DeepPurple"
             android:layout_marginLeft="25dp"
             android:layout_marginRight="25dp"
-            android:onClick="onColoursClick"/>
+            android:onClick="onColoursClick"
+            android:layout_weight="1"/>
 
         <Button
             android:id="@+id/button4"
@@ -75,7 +76,8 @@
             android:text="Test"
             android:textColor="@color/DeepPurple"
             android:textSize="32dp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:layout_weight="1"/>
 
         <Button
             android:id="@+id/button3"
@@ -88,7 +90,8 @@
             android:textColor="@color/DeepPurple"
             android:layout_marginLeft="25dp"
             android:layout_marginRight="25dp"
-            android:layout_marginTop="25dp"/>
+            android:layout_marginTop="25dp"
+            android:layout_weight="1"/>
 
     </LinearLayout>
 
