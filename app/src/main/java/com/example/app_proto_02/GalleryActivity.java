@@ -151,7 +151,7 @@ public class GalleryActivity extends AppCompatActivity {
         recyclerView.setDrawingCacheQuality(View.DRAWING_CACHE_QUALITY_HIGH);
 
         ArrayList<Cell> cells = prepareData();
-        MyAdapter adapter = new MyAdapter(getApplicationContext(), cells);
+        MyAdapter adapter = new MyAdapter(GalleryActivity.this, cells);
         recyclerView.setAdapter(adapter);
 
         if (cells.isEmpty()) {
