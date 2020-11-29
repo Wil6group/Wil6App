@@ -25,6 +25,12 @@ public class coloursOptions extends AppCompatActivity {
     {
         startActivity(new Intent(coloursOptions.this, colourTest.class));
     }
+    public void onGameClick(View view)
+    {
+        Intent intent = new Intent(coloursOptions.this, TestAnagram.class);
+        intent.putExtra("ID", "Colours");
+        startActivity(intent);
+    }
     public void onBackClick(View view)
     {
         startActivity(new Intent(coloursOptions.this, scroll_options.class));

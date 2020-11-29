@@ -11,4 +11,8 @@
     <string name="open">Open</string>
     <string name="close">Close</string>
 
+    <style name="GreenAccent" parent="ThemeOverlay.AppCompat.Light">
+        <item name="colorAccent">#02A309</item>
+    </style>
+
 </resources>

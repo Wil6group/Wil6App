@@ -22,7 +22,7 @@ public class TestAnagram extends AppCompatActivity {
 
     EditText et_guess;
 
-    Button b_check, b_new;
+    Button b_check;
 
     Random r;
 
@@ -40,7 +40,6 @@ public class TestAnagram extends AppCompatActivity {
         et_guess = (EditText) findViewById(R.id.et_guess);
 
         b_check = (Button) findViewById(R.id.b_check);
-        b_new = (Button) findViewById(R.id.b_new);
 
         Intent intent = getIntent();
         choice = intent.getStringExtra("ID");
@@ -70,7 +69,6 @@ public class TestAnagram extends AppCompatActivity {
                 if(et_guess.getText().toString().equalsIgnoreCase(currentWord)){
                     tv_info.setText("Awesome");
                     b_check.setEnabled(false);
-                    b_new.setEnabled(true);
                     newGame();
                 } else{
                     tv_info.setText("Try again");
@@ -79,13 +77,6 @@ public class TestAnagram extends AppCompatActivity {
             }
         });
 
-
-        b_new.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v){
-                newGame();
-            }
-        });
     }
 
     private String shuffleWord(String word){
@@ -105,7 +96,6 @@ public class TestAnagram extends AppCompatActivity {
 
         et_guess.setText("");
 
-        b_new.setEnabled(false);
         b_check.setEnabled(true);
     }
 

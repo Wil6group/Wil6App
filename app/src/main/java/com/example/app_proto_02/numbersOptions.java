@@ -17,10 +17,12 @@ public class numbersOptions extends AppCompatActivity {
     {
         startActivity(new Intent(numbersOptions.this, numbers.class));
     }
-    //public void onGameClick(View view)
-    //{
-    //startActivity(new Intent(numbersOptions.this, numbersTest.class));
-    //}
+    public void onGameClick(View view)
+    {
+        Intent intent = new Intent(getApplicationContext(), TestAnagram.class);
+        intent.putExtra("ID", "Numbers");
+        startActivity(intent);
+    }
     public void onBackClick(View view)
     {
         startActivity(new Intent(numbersOptions.this, scroll_options.class));
