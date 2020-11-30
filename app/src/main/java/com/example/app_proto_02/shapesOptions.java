@@ -20,7 +20,7 @@ public class shapesOptions extends AppCompatActivity {
     public void onShapeGameClick(View view)
     {
         Intent intent = new Intent(getApplicationContext(), PicMatching.class);
-        intent.putExtra("ID", "Shapes");
+        intent.putExtra("ID", "Shapes1");
         startActivity(intent);
     }
     public void onShapesTestClick(View view)

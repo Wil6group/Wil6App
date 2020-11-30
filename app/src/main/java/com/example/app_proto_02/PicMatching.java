@@ -30,10 +30,10 @@ public class PicMatching extends AppCompatActivity { //Pic matching done by Shiv
 
         Intent intent = getIntent();
         choice = intent.getStringExtra("ID");
-         if (choice.equals("Animals"))
+         if ((choice.equals("Animals")) || (choice.equals("Animals1")))
          {
             setAniPics();
-         }else if (choice.equals("Shapes"))
+         }else if ((choice.equals("Shapes")) || (choice.equals("Shapes1")))
          {
              setShapePics();
          }
@@ -77,7 +77,19 @@ public class PicMatching extends AppCompatActivity { //Pic matching done by Shiv
 
     public void onBackClick(View view)//In xml layout click on back button and set this method in the OnClick under attributes
     {
-        startActivity(new Intent(PicMatching.this, scroll_options.class));
+        if ((choice.equals("Animals")) || (choice.equals("Shapes")))
+        {
+            startActivity(new Intent(PicMatching.this, PicMatchingMenu.class));
+        }
+        else if (choice.equals("Animals1"))
+        {
+            startActivity(new Intent(PicMatching.this, animalsOptions.class));
+        }
+        else if (choice.equals("Shapes1"))
+        {
+            startActivity(new Intent(PicMatching.this, shapesOptions.class));
+        }
+
     }
 
     public void setAniPics()

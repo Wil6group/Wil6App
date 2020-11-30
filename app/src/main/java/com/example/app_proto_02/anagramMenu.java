@@ -41,4 +41,10 @@ public class anagramMenu extends AppCompatActivity {
         intent.putExtra("ID", "Colours");
         startActivity(intent);
     }
+
+    public void onBodyClick(View view) {
+        Intent intent = new Intent(getApplicationContext(), TestAnagram.class);
+        intent.putExtra("ID", "Body");
+        startActivity(intent);
+    }
 }

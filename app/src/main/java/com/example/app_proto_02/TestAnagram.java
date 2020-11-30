@@ -49,12 +49,15 @@ public class TestAnagram extends AppCompatActivity {
         }else if (choice.equals("Shapes"))
         {
             setShapePics();
-        }else if (choice.equals("Colours"))
+        }else if ((choice.equals("Colours")) || (choice.equals("Colours1")))
         {
             setColourPics();
-        }else if (choice.equals("Numbers"))
+        }else if ((choice.equals("Numbers")) || (choice.equals("Numbers1")))
         {
             setNumberPics();
+        }else if ((choice.equals("Body")) || (choice.equals("Body1")))
+        {
+            setBodyPics();
         }
 
 
@@ -101,7 +104,22 @@ public class TestAnagram extends AppCompatActivity {
 
     public void onBackClick(View view)
     {
-        startActivity(new Intent(TestAnagram.this, anagramMenu.class));
+        if ((choice.equals("Animals")) || (choice.equals("Shapes")) || (choice.equals("Colours")) || (choice.equals("Numbers")) || (choice.equals("Body")))
+        {
+            startActivity(new Intent(TestAnagram.this, anagramMenu.class));
+        }
+        else if (choice.equals("Colours1"))
+        {
+            startActivity(new Intent(TestAnagram.this, coloursOptions.class));
+        }
+        else if (choice.equals("Numbers1"))
+        {
+            startActivity(new Intent(TestAnagram.this, numbersOptions.class));
+        }
+        else if (choice.equals("Body1"))
+        {
+            startActivity(new Intent(TestAnagram.this, bodyOptions.class));
+        }
     }
 
     public void setNumberPics()
@@ -147,5 +165,16 @@ public class TestAnagram extends AppCompatActivity {
         dictionary[5] = "fish";
         dictionary[6] = "sheep";
         dictionary[7] = "butterfly";
+    }
+    public void setBodyPics()
+    {
+        dictionary[0] = "arm";
+        dictionary[1] = "hand";
+        dictionary[2] = "leg";
+        dictionary[3] = "foot";
+        dictionary[4] = "head";
+        dictionary[5] = "chest";
+        dictionary[6] = "stomach";
+        dictionary[7] = "finger";
     }
 }

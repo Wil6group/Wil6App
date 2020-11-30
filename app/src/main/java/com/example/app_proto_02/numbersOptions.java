@@ -20,7 +20,7 @@ public class numbersOptions extends AppCompatActivity {
     public void onGameClick(View view)
     {
         Intent intent = new Intent(getApplicationContext(), TestAnagram.class);
-        intent.putExtra("ID", "Numbers");
+        intent.putExtra("ID", "Numbers1");
         startActivity(intent);
     }
     public void onBackClick(View view)

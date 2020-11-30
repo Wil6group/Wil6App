@@ -29,4 +29,10 @@ public class bodyOptions extends AppCompatActivity {
     {
         startActivity(new Intent(bodyOptions.this, bodyTest.class));
     }
+    public void onBodyGameClick(View view)
+    {
+        Intent intent = new Intent(getApplicationContext(), TestAnagram.class);
+        intent.putExtra("ID", "Body1");
+        startActivity(intent);
+    }
 }

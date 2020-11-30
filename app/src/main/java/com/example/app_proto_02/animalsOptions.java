@@ -20,7 +20,7 @@ public class animalsOptions extends AppCompatActivity {
     public void onAnimalGameClick(View view)
     {
         Intent intent = new Intent(getApplicationContext(), PicMatching.class);
-        intent.putExtra("ID", "Animals");
+        intent.putExtra("ID", "Animals1");
         startActivity(intent);
     }
     public void onBackClick(View view)
