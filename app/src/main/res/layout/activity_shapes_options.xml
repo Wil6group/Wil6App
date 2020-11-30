@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".shapesOptions"
-    android:background="@drawable/bg1">
+    android:background="@drawable/bg3">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -28,7 +28,8 @@
             android:layout_height="50dp"
             android:background="@drawable/rounded_button_3"
             android:text="Back"
-            android:textSize="32dp"
+            android:textAllCaps="false"
+            android:textSize="24dp"
             android:textStyle="bold"
             android:textColor="@color/DeepPurple"
             android:layout_marginTop="10dp"
@@ -56,6 +57,7 @@
             android:layout_height="150dp"
             android:background="@drawable/rounded_button_3"
             android:text="Shapes"
+            android:textAllCaps="false"
             android:textSize="32dp"
             android:textStyle="bold"
             android:textColor="@color/DeepPurple"
@@ -74,6 +76,7 @@
             android:background="@drawable/rounded_button_3"
             android:onClick="onShapesTestClick"
             android:text="Test"
+            android:textAllCaps="false"
             android:textColor="@color/DeepPurple"
             android:textSize="32dp"
             android:textStyle="bold"
@@ -88,6 +91,7 @@
             android:layout_marginRight="25dp"
             android:background="@drawable/rounded_button_3"
             android:onClick="onShapeGameClick"
+            android:textAllCaps="false"
             android:text="Game"
             android:textColor="@color/DeepPurple"
             android:textSize="32dp"

@@ -94,6 +94,6 @@ public class MathGame extends AppCompatActivity {
 
     public void onBackClick(View view)
     {
-        startActivity(new Intent(MathGame.this, numbers.class));
+        startActivity(new Intent(MathGame.this, numbersOptions.class));
     }
 }

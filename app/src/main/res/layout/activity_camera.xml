@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bg3"
+    android:background="@drawable/bg4"
     tools:context=".CameraActivity">
 
     <ImageView
@@ -29,7 +29,8 @@
         android:layout_marginRight="20dp"
         android:background="@drawable/rounded_button_3"
         android:text="Save Picture"
-        android:textSize="32dp"
+        android:textSize="24dp"
+        android:textAllCaps="false"
         android:textStyle="bold"
         android:textColor="@color/DeepPurple"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -46,9 +47,10 @@
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:background="@drawable/rounded_button_3"
-        android:text="Go Back"
-        android:textSize="32dp"
+        android:text="Back"
+        android:textSize="24dp"
         android:textStyle="bold"
+        android:textAllCaps="false"
         android:textColor="@color/DeepPurple"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

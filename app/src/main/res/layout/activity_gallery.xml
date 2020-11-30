@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".GalleryActivity"
-    android:background="@drawable/bg3"
+    android:background="@drawable/bg4"
     android:orientation="vertical">
 
     <TextView
@@ -15,7 +15,7 @@
         android:layout_centerVertical="true"
         android:textAlignment="center"
         android:layout_margin="10dp"
-        android:textColor="@android:color/black"
+        android:textColor="@color/DeepPurple"
         android:textSize="28sp"
         android:text="My Family"
         android:textStyle="bold"
@@ -56,7 +56,8 @@
             android:layout_height="wrap_content"
             android:background="@drawable/rounded_button_3"
             android:text="Take Photo"
-            android:textSize="32dp"
+            android:textAllCaps="false"
+            android:textSize="24dp"
             android:textStyle="bold"
             android:textColor="@color/DeepPurple"
             android:layout_gravity="center_horizontal"/>
@@ -66,8 +67,9 @@
             android:layout_width="250dp"
             android:layout_height="wrap_content"
             android:background="@drawable/rounded_button_3"
-            android:text="Go Back"
-            android:textSize="32dp"
+            android:text="Back"
+            android:textSize="24dp"
+            android:textAllCaps="false"
             android:textStyle="bold"
             android:textColor="@color/DeepPurple"
             android:onClick="onBackClick"

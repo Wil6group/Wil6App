@@ -23,6 +23,8 @@ public class scroll_options extends AppCompatActivity implements NavigationView.
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
+        getSupportActionBar().setTitle("Learning Options");
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_scroll_options);
 
@@ -120,6 +122,7 @@ public class scroll_options extends AppCompatActivity implements NavigationView.
         }
         if (id == R.id.nav_portal)
         {
+            startActivity(new Intent(scroll_options.this, Portal.class));
         }
         if (id == R.id.nav_logout)
         {

@@ -92,12 +92,6 @@ public class body extends AppCompatActivity {
         String toSpeak = word;
         t1.speak(toSpeak, TextToSpeech.QUEUE_FLUSH, null);
     }
-    public void Toes(View view)
-    {
-        word = "toes";
-        String toSpeak = word;
-        t1.speak(toSpeak, TextToSpeech.QUEUE_FLUSH, null);
-    }
     public void onPause()
     {
         if(t1!=null)

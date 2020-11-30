@@ -13,32 +13,83 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".anagramMenu"></activity>
-        <activity android:name=".bodyTest" />
-        <activity android:name=".shapesTest" />
-        <activity android:name=".colourTest" />
-        <activity android:name=".animalTest" />
-        <activity android:name=".bodyOptions" />
-        <activity android:name=".shapesOptions" />
-        <activity android:name=".animalsOptions" />
-        <activity android:name=".numbersOptions" />
-        <activity android:name=".coloursOptions" />
-        <activity android:name=".MathGame" />
-        <activity android:name=".body" />
-        <activity android:name=".TestAnagram" />
-        <activity android:name=".PicMatching" />
-        <activity android:name=".shapes_test_level_1" />
-        <activity android:name=".animals" />
-        <activity android:name=".colours" />
-        <activity android:name=".numbers" />
-        <activity android:name=".shapes" />
+        <activity android:name=".Portal"></activity>
+        <activity
+            android:name=".anagramMenu"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".bodyTest"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".shapesTest"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".colourTest"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".animalTest"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".bodyOptions"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".shapesOptions"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".animalsOptions"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".numbersOptions"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".coloursOptions"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".MathGame"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".body"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".TestAnagram"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".PicMatching"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".shapes_test_level_1"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".animals"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".colours"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".numbers"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".shapes"
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".scroll_options" />
-        <activity android:name=".Register" />
-        <activity android:name=".PicMatchingMenu" />
-        <activity android:name=".CameraActivity" />
-        <activity android:name=".GalleryActivity" />
-        <activity android:name=".SingleImageViewActivity" />
-        <activity android:name=".Login">
+        <activity
+            android:name=".Register"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".PicMatchingMenu"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".CameraActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".GalleryActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".SingleImageViewActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Login"
+            android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

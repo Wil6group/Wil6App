@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".coloursOptions"
-    android:background="@drawable/bg1">
+    android:background="@drawable/bg3">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -28,8 +28,9 @@
             android:layout_height="50dp"
             android:background="@drawable/rounded_button_3"
             android:text="Back"
-            android:textSize="32dp"
+            android:textSize="24dp"
             android:textStyle="bold"
+            android:textAllCaps="false"
             android:textColor="@color/DeepPurple"
             android:layout_marginTop="10dp"
             android:layout_marginLeft="50dp"
@@ -58,6 +59,7 @@
             android:text="Colours"
             android:textSize="32dp"
             android:textStyle="bold"
+            android:textAllCaps="false"
             android:textColor="@color/DeepPurple"
             android:layout_marginLeft="25dp"
             android:layout_marginRight="25dp"
@@ -71,6 +73,7 @@
             android:layout_marginLeft="25dp"
             android:layout_marginTop="25dp"
             android:layout_marginRight="25dp"
+            android:textAllCaps="false"
             android:background="@drawable/rounded_button_3"
             android:onClick="onTestClick"
             android:text="Test"
@@ -87,6 +90,7 @@
             android:layout_marginTop="25dp"
             android:layout_marginRight="25dp"
             android:layout_weight="1"
+            android:textAllCaps="false"
             android:background="@drawable/rounded_button_3"
             android:onClick="onGameClick"
             android:text="Game"

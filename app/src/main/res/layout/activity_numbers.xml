@@ -5,7 +5,7 @@
     android:id="@+id/NumbersActivity"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bg4"
+    android:background="@drawable/bg1"
     tools:context=".numbers">
 
     <LinearLayout
@@ -29,11 +29,12 @@
             android:layout_height="50dp"
             android:background="@drawable/rounded_button_3"
             android:text="Back"
-            android:textSize="32dp"
+            android:textSize="24dp"
+            android:textAllCaps="false"
             android:textStyle="bold"
             android:textColor="@color/DeepPurple"
             android:layout_marginTop="10dp"
-            android:layout_marginLeft="25dp"
+            android:layout_marginLeft="60dp"
             android:layout_alignParentRight="true"
             android:onClick="onBackClick"/>
 

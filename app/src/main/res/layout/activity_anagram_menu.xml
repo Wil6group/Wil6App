@@ -9,8 +9,8 @@
 
     <Button
         android:id="@+id/back2"
-        android:layout_width="355dp"
-        android:layout_height="47dp"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
         android:layout_alignParentRight="true"
         android:layout_marginStart="28dp"
         android:layout_marginEnd="28dp"
@@ -19,12 +19,13 @@
         android:onClick="onBackClick"
         android:text="Back"
         android:textColor="@color/DeepPurple"
-        android:textSize="32dp"
+        android:textSize="24dp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn1" />
+        app:layout_constraintTop_toBottomOf="@+id/btn1"
+        android:textAllCaps="false"/>
 
     <ImageButton
         android:id="@+id/button14"
@@ -166,9 +167,9 @@
         android:layout_gravity="center_horizontal"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
-        android:layout_marginEnd="108dp"
+        android:layout_marginEnd="200dp"
         android:layout_marginBottom="39dp"
-        android:text="Anagram Menu"
+        android:text="Anagram"
         android:textColor="@color/DeepPurple"
         android:textSize="42dp"
         android:textStyle="bold"
