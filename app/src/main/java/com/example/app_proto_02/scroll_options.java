@@ -92,7 +92,10 @@ public class scroll_options extends AppCompatActivity implements NavigationView.
     public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) //Nav Drawer navigation to other activities. Connected to nav_menu.xml in res -> menu
     {
         int id = menuItem.getItemId();
-
+        if (id == R.id.nav_camera)
+        {
+            startActivity(new Intent(scroll_options.this, GalleryActivity.class));
+        }
         if (id == R.id.nav_home)
         {
             startActivity(new Intent(scroll_options.this, scroll_options.class));
@@ -116,6 +119,10 @@ public class scroll_options extends AppCompatActivity implements NavigationView.
         if (id == R.id.nav_shapes)
         {
             startActivity(new Intent(scroll_options.this, shapes.class));
+        }
+        if (id == R.id.nav_behaviour)
+        {
+            startActivity(new Intent(scroll_options.this, Behavior.class));
         }
         if (id == R.id.nav_picMatch)
         {

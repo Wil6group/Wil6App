@@ -11,6 +11,10 @@
 
         <item android:title="Learn">
         <menu>
+            <item
+                android:id="@+id/nav_camera"
+                android:icon="@drawable/ic_baseline_photo_camera_24"
+                android:title="Camera" />
         <item
             android:id="@+id/nav_animal"
             android:icon="@drawable/ic_pets_black_24dp"
@@ -31,6 +35,10 @@
             android:id="@+id/nav_shapes"
             android:icon="@drawable/shapesicon"
             android:title="Shapes" />
+            <item
+                android:id="@+id/nav_behaviour"
+                android:icon="@drawable/ic_baseline_people_24"
+                android:title="Behaviour" />
         </menu>
         </item>
     </group>

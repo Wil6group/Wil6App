@@ -35,8 +35,8 @@ public class MathGame extends AppCompatActivity {
     public void calculationoperation(String operation){
 
         if(operation.equals("Addition")){
-            int a = new Random().nextInt((100));
-            int b = new Random().nextInt((100));
+            int a = new Random().nextInt((30));
+            int b = new Random().nextInt((30));
             String questio = a+" + "+b;
             question = (TextView) findViewById(R.id.QuestionTxt);
             question.setText(questio);
@@ -46,8 +46,8 @@ public class MathGame extends AppCompatActivity {
 
 
         if(operation.equals("Subtraction")){
-            int a = new Random().nextInt((100));
-            int b = new Random().nextInt((100));
+            int a = new Random().nextInt(50 - 25) + 25;
+            int b = new Random().nextInt(25);
             String questio = a+" - "+b;
             question = (TextView) findViewById(R.id.QuestionTxt);
             question.setText(questio);
@@ -56,7 +56,7 @@ public class MathGame extends AppCompatActivity {
         }
 
         if(operation.equals("Division")){
-            int a = new Random().nextInt((100));
+            int a = new Random().nextInt((20));
             int b = new Random().nextInt((10));
             int c = a*b;
             String questio = c+" / "+a;
@@ -78,18 +78,25 @@ public class MathGame extends AppCompatActivity {
         }
     }
 
-    public void ValidateAnswer(View v){
-        answer =  (EditText) findViewById(R.id.AnswerTxt);
-        String userasnwer =answer.getText().toString();
-        if(Integer.parseInt(userasnwer) ==correctanswer){
-            Toast.makeText(this,"Well done this is correct",Toast.LENGTH_LONG).show();
-            calculationoperation(mode);
-            answer.setText("");
-        }
+    public void ValidateAnswer(View v)
+    {
+        answer = findViewById(R.id.AnswerTxt);
+        String userasnwer = answer.getText().toString();
+        if (userasnwer.equals(""))
+        {
+            Toast.makeText(this,"Please enter a number.",Toast.LENGTH_SHORT).show();
+        }else
+            {
+                if(Integer.parseInt(userasnwer) == correctanswer){
+                    Toast.makeText(this,"Well done this is correct",Toast.LENGTH_LONG).show();
+                    calculationoperation(mode);
+                    answer.setText("");
+                }
+                else{
+                    Toast.makeText(this,"Wrong try again",Toast.LENGTH_LONG).show();
+                }
+            }
 
-        else{
-            Toast.makeText(this,"Wrong try again",Toast.LENGTH_LONG).show();
-        }
     }
 
     public void onBackClick(View view)
