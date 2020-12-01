@@ -16,7 +16,7 @@ public class MathGame extends AppCompatActivity {
                                                   //Gamification
 
     public TextView operation;
-    public EditText question;
+    public TextView question;
     public EditText answer;
     public  int correctanswer;
     String mode;
@@ -38,7 +38,7 @@ public class MathGame extends AppCompatActivity {
             int a = new Random().nextInt((100));
             int b = new Random().nextInt((100));
             String questio = a+" + "+b;
-            question = (EditText) findViewById(R.id.QuestionTxt);
+            question = (TextView) findViewById(R.id.QuestionTxt);
             question.setText(questio);
             correctanswer = a+b;
 
@@ -49,7 +49,7 @@ public class MathGame extends AppCompatActivity {
             int a = new Random().nextInt((100));
             int b = new Random().nextInt((100));
             String questio = a+" - "+b;
-            question = (EditText) findViewById(R.id.QuestionTxt);
+            question = (TextView) findViewById(R.id.QuestionTxt);
             question.setText(questio);
             correctanswer =a-b;
 
@@ -60,7 +60,7 @@ public class MathGame extends AppCompatActivity {
             int b = new Random().nextInt((10));
             int c = a*b;
             String questio = c+" / "+a;
-            question = (EditText) findViewById(R.id.QuestionTxt);
+            question = (TextView) findViewById(R.id.QuestionTxt);
             question.setText(questio);
             correctanswer =c/a;
 
@@ -70,7 +70,7 @@ public class MathGame extends AppCompatActivity {
             int a = new Random().nextInt((12));
             int b = new Random().nextInt((12));
             String questio = a+" x "+b;
-            question = (EditText) findViewById(R.id.QuestionTxt);
+            question = (TextView) findViewById(R.id.QuestionTxt);
             question.setText(questio);
             correctanswer =a*b;
 

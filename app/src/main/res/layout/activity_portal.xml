@@ -19,7 +19,7 @@
         android:text="Parent Portal"
         android:textStyle="bold"
         android:textSize="42dp"
-        android:textColor="@color/DeepPurple"
+        android:textColor="@color/Black"
         android:layout_gravity="center_horizontal"
         android:layout_marginLeft="5dp"/>
 
@@ -60,7 +60,7 @@
             <Button
                 android:layout_width="300dp"
                 android:layout_height="50dp"
-                android:text="Elains FaceBook"
+                android:text="FaceBook Page"
                 android:onClick="onFaceBookClick"
                 android:background="@drawable/rounded_button_3"
                 android:textColor="@color/DeepPurple"
@@ -71,8 +71,8 @@
             <Button
                 android:layout_width="300dp"
                 android:layout_height="50dp"
-                android:text="Instructional Facts"
-                android:onClick="onInstructionalFactsClick"
+                android:text="WebPage"
+                android:onClick="onWebPageClick"
                 android:background="@drawable/rounded_button_3"
                 android:textColor="@color/DeepPurple"
                 android:textSize="24dp"
@@ -82,8 +82,8 @@
             <Button
                 android:layout_width="300dp"
                 android:layout_height="50dp"
-                android:text="Parenting"
-                android:onClick="onParentingClick"
+                android:text="Work Books"
+                android:onClick="onWorkBooksClick"
                 android:background="@drawable/rounded_button_3"
                 android:textColor="@color/DeepPurple"
                 android:textSize="24dp"
@@ -93,8 +93,8 @@
             <Button
                 android:layout_width="300dp"
                 android:layout_height="50dp"
-                android:text="Life Lessons"
-                android:onClick="onLessonsClick"
+                android:text="Support Us"
+                android:onClick="onSupportClick"
                 android:background="@drawable/rounded_button_3"
                 android:textColor="@color/DeepPurple"
                 android:textSize="24dp"

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bg1"
+    android:background="@drawable/bg3"
     tools:context=".animalTest">
 
     <Button
@@ -29,7 +29,7 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:text="What is the animal?"
-        android:textColor="@color/DeepPurple"
+        android:textColor="@color/Black"
         android:textSize="32dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -68,7 +68,7 @@
         android:layout_marginEnd="149dp"
         android:layout_marginBottom="63dp"
         android:text="Animals Test"
-        android:textColor="@color/DeepPurple"
+        android:textColor="@color/Black"
         android:textSize="42dp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/imgQuestion"

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".scroll_options"
-    android:background="@drawable/bg1"
+    android:background="@drawable/bg3"
     android:id="@+id/ScrollDrawer">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -33,7 +33,7 @@
                     android:text="Choose any of the below"
                     android:textStyle="bold"
                     android:textSize="30dp"
-                    android:textColor="@color/DeepPurple"
+                    android:textColor="@color/Black"
                     android:layout_gravity="center_horizontal"/>
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -72,7 +72,7 @@
                         android:text="Camera"
                         android:textStyle="bold"
                         android:textSize="30dp"
-                        android:textColor="@color/DeepPurple"
+                        android:textColor="@color/Black"
                         android:layout_gravity="center_horizontal"
                         android:layout_marginLeft="65dp"/>
 
@@ -82,7 +82,7 @@
                         android:text="Animals"
                         android:textStyle="bold"
                         android:textSize="30dp"
-                        android:textColor="@color/DeepPurple"
+                        android:textColor="@color/Black"
                         android:layout_gravity="center_horizontal"
                         android:layout_marginLeft="65dp"/>
                 </LinearLayout>
@@ -126,7 +126,7 @@
                         android:text="Shapes"
                         android:textStyle="bold"
                         android:textSize="30dp"
-                        android:textColor="@color/DeepPurple"
+                        android:textColor="@color/Black"
                         android:layout_gravity="center_horizontal"
                         android:layout_marginLeft="65dp"/>
 
@@ -136,7 +136,7 @@
                         android:text="Body"
                         android:textStyle="bold"
                         android:textSize="30dp"
-                        android:textColor="@color/DeepPurple"
+                        android:textColor="@color/Black"
                         android:layout_gravity="center_horizontal"
                         android:layout_marginLeft="90dp"/>
                 </LinearLayout>
@@ -180,19 +180,55 @@
                         android:text="Colours"
                         android:textStyle="bold"
                         android:textSize="30dp"
-                        android:textColor="@color/DeepPurple"
+                        android:textColor="@color/Black"
                         android:layout_gravity="center_horizontal"
                         android:layout_marginLeft="65dp"/>
 
                     <TextView
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginLeft="60dp"
                         android:text="Numbers"
+                        android:textColor="@color/Black"
+                        android:textSize="30dp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="15dp">
+
+
+                    <ImageButton
+                        android:id="@+id/button7"
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:layout_marginLeft="40dp"
+                        android:background="@drawable/rounded_button_4"
+                        android:padding="10dp"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/behavior"
+                        android:onClick="onBehaviorClick"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Behavior"
                         android:textStyle="bold"
                         android:textSize="30dp"
-                        android:textColor="@color/DeepPurple"
+                        android:textColor="@color/Black"
                         android:layout_gravity="center_horizontal"
-                        android:layout_marginLeft="60dp"/>
+                        android:layout_marginLeft="50dp"/>
+
                 </LinearLayout>
 
             </LinearLayout>

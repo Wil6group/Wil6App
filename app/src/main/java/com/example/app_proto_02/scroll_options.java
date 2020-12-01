@@ -14,6 +14,7 @@ import android.view.MenuItem;
 import android.view.View;
 
 import com.google.android.material.navigation.NavigationView;
+import com.google.firebase.auth.FirebaseAuth;
 
 public class scroll_options extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
@@ -55,6 +56,10 @@ public class scroll_options extends AppCompatActivity implements NavigationView.
     public void onBodyOptionsClick(View view)
     {
         startActivity(new Intent(scroll_options.this,bodyOptions.class));
+    }
+    public void onBehaviorClick(View view)
+    {
+        startActivity(new Intent(scroll_options.this, Behavior.class));
     }
     //---Scroll options end
 
@@ -126,6 +131,7 @@ public class scroll_options extends AppCompatActivity implements NavigationView.
         }
         if (id == R.id.nav_logout)
         {
+            FirebaseAuth.getInstance().signOut();
             finishAffinity();
             startActivity(new Intent(scroll_options.this, Login.class));
             //System.exit(0);

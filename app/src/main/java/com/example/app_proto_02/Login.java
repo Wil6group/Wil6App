@@ -3,6 +3,7 @@ package com.example.app_proto_02;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ProgressBar;
@@ -21,7 +22,7 @@ public class Login extends AppCompatActivity {
 
     private EditText email,pass;
     private ProgressBar progressBar;
-
+    private FirebaseAuth.AuthStateListener mAuthListener;
     private FirebaseAuth mAuth;
 
     @Override
@@ -32,6 +33,20 @@ public class Login extends AppCompatActivity {
         InitializeFields();
         progressBar.setVisibility(View.GONE);
         mAuth = FirebaseAuth.getInstance();
+
+        //Sign in existing user
+        mAuthListener = new FirebaseAuth.AuthStateListener() {
+            @Override
+            public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
+                FirebaseUser user = firebaseAuth.getCurrentUser();
+                if (user != null)
+                {
+                    //Opens the Navigate Page
+                    Intent intent = new Intent(Login.this, scroll_options.class );
+                    startActivity(intent);
+                }
+            }
+        };
     }
 
     public void onLoginClick(View view)
@@ -68,13 +83,17 @@ public class Login extends AppCompatActivity {
                     }else
                     {
                         String message = task.getException().toString();
-                        Toast.makeText(Login.this, "Error: Incorrect details or user does not exist!", Toast.LENGTH_LONG).show();
+                        Toast.makeText(Login.this, "Error: Incorrect details or user does not exist", Toast.LENGTH_LONG).show();
                     }
                 }
             });
         }
     }
-
+    @Override
+    protected void onStart() {
+        super.onStart();
+        mAuth.addAuthStateListener(mAuthListener);
+    }
     private void InitializeFields()
     {
         email = findViewById(R.id.etEmail);

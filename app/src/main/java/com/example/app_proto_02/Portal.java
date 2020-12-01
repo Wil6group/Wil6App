@@ -20,31 +20,31 @@ public class Portal extends AppCompatActivity {
         Intent intent = new Intent();
         intent.setAction(Intent.ACTION_VIEW);
         intent.addCategory(Intent.CATEGORY_BROWSABLE);
-        intent.setData(Uri.parse("http://www.Google.com"));
+        intent.setData(Uri.parse("https://www.facebook.com/Down-Syndrome-Association-of-Pretoria-234087526766921/"));
         startActivity(intent);
     }
-    public void onInstructionalFactsClick(View view)
+    public void onWebPageClick(View view)
     {
         Intent intent = new Intent();
         intent.setAction(Intent.ACTION_VIEW);
         intent.addCategory(Intent.CATEGORY_BROWSABLE);
-        intent.setData(Uri.parse("https://gigisplayhouse.org/quadcities/uncategorized/five-instructional-strategies-for-children-with-down-syndrome"));
+        intent.setData(Uri.parse("http://www.downs.org.za/"));
         startActivity(intent);
     }
-    public void onParentingClick(View view)
+    public void onWorkBooksClick(View view)
     {
         Intent intent = new Intent();
         intent.setAction(Intent.ACTION_VIEW);
         intent.addCategory(Intent.CATEGORY_BROWSABLE);
-        intent.setData(Uri.parse("https://www.webmd.com/children/parenting-child-downs-syndrome"));
+        intent.setData(Uri.parse("http://www.downs.org.za/workbooks-page/"));
         startActivity(intent);
     }
-    public void onLessonsClick(View view)
+    public void onSupportClick(View view)
     {
         Intent intent = new Intent();
         intent.setAction(Intent.ACTION_VIEW);
         intent.addCategory(Intent.CATEGORY_BROWSABLE);
-        intent.setData(Uri.parse("https://www.parents.com/health/down-syndrome/raising-a-child-with-down-syndrome/"));
+        intent.setData(Uri.parse("https://www.backabuddy.co.za/charity/profile/dsat"));
         startActivity(intent);
     }
     public void onBackClick(View view)

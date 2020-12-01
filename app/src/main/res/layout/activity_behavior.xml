@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Behavior"
+    android:background="@drawable/bg3">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Behavior"
+            android:textStyle="bold"
+            android:textSize="42dp"
+            android:textColor="@color/Black"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="40dp"/>
+
+        <Button
+            android:id="@+id/Back"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:background="@drawable/rounded_button_3"
+            android:text="Back"
+            android:textSize="24dp"
+            android:textStyle="bold"
+            android:textColor="@color/DeepPurple"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:textAllCaps="false"
+            android:layout_alignParentRight="true"
+            android:onClick="onBackClick"/>
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="409dp"
+        android:layout_height="match_parent"
+        android:layout_marginTop="70dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:layout_width="325dp"
+                android:layout_height="150dp"
+                android:layout_marginLeft="40dp"
+                android:background="@drawable/rounded_button_4"
+                android:padding="10dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/mask"
+                android:onClick="onMaskClick"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Wear your mask outside"
+                android:textStyle="bold"
+                android:textSize="30dp"
+                android:textColor="@color/Black"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="40dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:layout_width="325dp"
+                android:layout_height="150dp"
+                android:layout_marginLeft="40dp"
+                android:background="@drawable/rounded_button_4"
+                android:padding="10dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/wash"
+                android:onClick="onWashClick"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Keep your hands clean"
+                android:textStyle="bold"
+                android:textSize="30dp"
+                android:textColor="@color/Black"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="45dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:layout_width="325dp"
+                android:layout_height="150dp"
+                android:layout_marginLeft="40dp"
+                android:background="@drawable/rounded_button_4"
+                android:padding="10dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/line"
+                android:onClick="onLineClick"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Wait your turn in line"
+                android:textStyle="bold"
+                android:textSize="30dp"
+                android:textColor="@color/Black"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="65dp"/>
+
+        </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:layout_width="325dp"
+            android:layout_height="150dp"
+            android:layout_marginLeft="40dp"
+            android:background="@drawable/rounded_button_4"
+            android:padding="10dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/play2"
+            android:onClick="onPlayClick"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Play nicely with others"
+            android:textStyle="bold"
+            android:textSize="30dp"
+            android:textColor="@color/Black"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="50dp"/>
+
+    </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:layout_width="325dp"
+                android:layout_height="150dp"
+                android:layout_marginLeft="40dp"
+                android:background="@drawable/rounded_button_4"
+                android:padding="10dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/friends2"
+                android:onClick="onFriendsClick"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Have fun with your friends"
+                android:textStyle="bold"
+                android:textSize="30dp"
+                android:textColor="@color/Black"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="30dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:layout_width="325dp"
+                android:layout_height="150dp"
+                android:layout_marginLeft="40dp"
+                android:background="@drawable/rounded_button_4"
+                android:padding="10dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/family"
+                android:onClick="onFamilyClick"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Love your family and pets"
+                android:textStyle="bold"
+                android:textSize="30dp"
+                android:textColor="@color/Black"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="30dp"/>
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

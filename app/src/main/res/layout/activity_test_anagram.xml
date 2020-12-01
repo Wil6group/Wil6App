@@ -5,7 +5,7 @@
     android:id="@+id/AnagramActivity"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bg4"
+    android:background="@drawable/bg3"
     android:padding="10dp"
     tools:context=".TestAnagram">
 
@@ -34,8 +34,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:text="Guess the word!"
-        android:textColor="@color/DeepPurple"
+        android:text="Guess the word"
+        android:textColor="@color/Black"
         android:textSize="32dp"
         app:layout_constraintBottom_toTopOf="@+id/tv_word"
         app:layout_constraintEnd_toEndOf="parent"
@@ -48,7 +48,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/tv_info"
         android:layout_centerHorizontal="true"
-        android:textColor="@color/DeepPurple"
+        android:textColor="@color/Black"
         android:gravity="center"
         android:text=""
         android:textSize="32dp"

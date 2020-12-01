@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bg1"
+    android:background="@drawable/bg3"
     android:foregroundTint="#FFFFFF"
     tools:context=".MathGame">
 
@@ -85,7 +85,7 @@
         android:enabled="false"
         android:inputType="textPersonName"
         android:text="Operation"
-        android:textColor="@color/DeepPurple"
+        android:textColor="@color/Black"
         android:textSize="30dp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/QuestionTxt"
@@ -101,7 +101,7 @@
         android:layout_marginStart="96dp"
         android:layout_marginEnd="96dp"
         android:layout_marginBottom="143dp"
-        android:progressTint="@color/DeepPurple"
+        android:progressTint="@color/Green"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -109,20 +109,23 @@
 
     <EditText
         android:id="@+id/AnswerTxt"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
         android:layout_marginStart="39dp"
         android:layout_marginEnd="40dp"
         android:layout_marginBottom="87dp"
         android:ems="10"
+        android:textColor="@color/DeepPurple"
         android:inputType="number"
         android:textSize="22dp"
+        android:paddingLeft="10dp"
+        android:background="@drawable/rounded_button_3"
         app:layout_constraintBottom_toTopOf="@+id/CompleteBtn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/textView2"
         app:layout_constraintTop_toBottomOf="@+id/QuestionTxt" />
 
-    <EditText
+    <TextView
         android:id="@+id/QuestionTxt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -131,6 +134,7 @@
         android:layout_marginBottom="64dp"
         android:ems="10"
         android:textSize="22dp"
+        android:textColor="@color/Black"
         android:inputType="textPersonName"
         app:layout_constraintBottom_toTopOf="@+id/AnswerTxt"
         app:layout_constraintEnd_toEndOf="parent"

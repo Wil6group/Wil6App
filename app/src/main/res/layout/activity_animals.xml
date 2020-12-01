@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".animals"
-    android:background="@drawable/bg4"
+    android:background="@drawable/bg3"
     android:id="@+id/AnimalActivity">
 
     <LinearLayout
@@ -19,7 +19,7 @@
             android:text="Animals"
             android:textStyle="bold"
             android:textSize="42dp"
-            android:textColor="@color/DeepPurple"
+            android:textColor="@color/Black"
             android:layout_gravity="center_horizontal"
             android:layout_marginLeft="40dp"/>
 
@@ -94,7 +94,7 @@
                     android:text="Bee"
                     android:textStyle="bold"
                     android:textSize="30dp"
-                    android:textColor="@color/DeepPurple"
+                    android:textColor="@color/Black"
                     android:layout_gravity="center_horizontal"
                     android:layout_marginLeft="90dp"/>
 
@@ -104,7 +104,7 @@
                     android:text="Bird"
                     android:textStyle="bold"
                     android:textSize="30dp"
-                    android:textColor="@color/DeepPurple"
+                    android:textColor="@color/Black"
                     android:layout_gravity="center_horizontal"
                     android:layout_marginLeft="125dp"/>
             </LinearLayout>
@@ -147,7 +147,7 @@
                     android:text="Cat"
                     android:textStyle="bold"
                     android:textSize="30dp"
-                    android:textColor="@color/DeepPurple"
+                    android:textColor="@color/Black"
                     android:layout_gravity="center_horizontal"
                     android:layout_marginLeft="95dp"/>
 
@@ -157,7 +157,7 @@
                     android:text="Chicken"
                     android:textStyle="bold"
                     android:textSize="30dp"
-                    android:textColor="@color/DeepPurple"
+                    android:textColor="@color/Black"
                     android:layout_gravity="center_horizontal"
                     android:layout_marginLeft="95dp"/>
             </LinearLayout>
@@ -200,7 +200,7 @@
                     android:text="Dog"
                     android:textStyle="bold"
                     android:textSize="30dp"
-                    android:textColor="@color/DeepPurple"
+                    android:textColor="@color/Black"
                     android:layout_gravity="center_horizontal"
                     android:layout_marginLeft="90dp"/>
 
@@ -210,7 +210,7 @@
                     android:text="Fish"
                     android:textStyle="bold"
                     android:textSize="30dp"
-                    android:textColor="@color/DeepPurple"
+                    android:textColor="@color/Black"
                     android:layout_gravity="center_horizontal"
                     android:layout_marginLeft="120dp"/>
             </LinearLayout>
@@ -254,7 +254,7 @@
                     android:text="Sheep"
                     android:textStyle="bold"
                     android:textSize="30dp"
-                    android:textColor="@color/DeepPurple"
+                    android:textColor="@color/Black"
                     android:layout_gravity="center_horizontal"
                     android:layout_marginLeft="75dp"/>
 
@@ -264,7 +264,7 @@
                     android:text="Butterfly"
                     android:textStyle="bold"
                     android:textSize="30dp"
-                    android:textColor="@color/DeepPurple"
+                    android:textColor="@color/Black"
                     android:layout_gravity="center_horizontal"
                     android:layout_marginLeft="65dp"/>
 

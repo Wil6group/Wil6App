@@ -35,15 +35,21 @@
 
     <Button
         android:id="@+id/btnSingleBack"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/custom_btn_1"
-        android:text="Go Back"
-        android:textAllCaps="false"
-        android:textSize="20dp"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="139dp"
         android:layout_marginLeft="20dp"
+        android:layout_marginEnd="122dp"
         android:layout_marginRight="20dp"
-        android:layout_marginBottom="40dp"
-        android:layout_alignParentBottom="true"/>
+        android:layout_marginBottom="31dp"
+        android:background="@drawable/rounded_button_3"
+        android:text="Back"
+        android:textAllCaps="false"
+        android:textColor="@color/DeepPurple"
+        android:textSize="20dp" />
 
 </RelativeLayout>
