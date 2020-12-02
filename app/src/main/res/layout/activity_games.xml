@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".coloursOptions"
+    tools:context=".Games"
     android:background="@drawable/bg3">
 
     <LinearLayout
@@ -15,7 +15,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Colours"
+            android:text="Games"
             android:textStyle="bold"
             android:textSize="42dp"
             android:textColor="@color/Black"
@@ -30,10 +30,10 @@
             android:text="Back"
             android:textSize="24dp"
             android:textStyle="bold"
-            android:textAllCaps="false"
             android:textColor="@color/DeepPurple"
             android:layout_marginTop="10dp"
-            android:layout_marginLeft="50dp"
+            android:layout_marginLeft="65dp"
+            android:textAllCaps="false"
             android:layout_alignParentRight="true"
             android:onClick="onBackClick"/>
 
@@ -56,34 +56,16 @@
             android:layout_width="match_parent"
             android:layout_height="150dp"
             android:background="@drawable/rounded_button_3"
-            android:text="Colours"
+            android:text="Matching Pictures"
             android:textSize="32dp"
-            android:textStyle="bold"
-            android:drawableRight="@drawable/colour"
-            android:paddingRight="70dp"
             android:textAllCaps="false"
+            android:textStyle="bold"
+            android:drawableRight="@drawable/matchingicon"
+            android:paddingRight="70dp"
             android:textColor="@color/DeepPurple"
             android:layout_marginLeft="25dp"
             android:layout_marginRight="25dp"
-            android:onClick="onColoursClick"
-            android:layout_weight="1"/>
-
-        <Button
-            android:id="@+id/button4"
-            android:layout_width="match_parent"
-            android:layout_height="150dp"
-            android:layout_marginLeft="25dp"
-            android:layout_marginTop="25dp"
-            android:layout_marginRight="25dp"
-            android:textAllCaps="false"
-            android:background="@drawable/rounded_button_3"
-            android:drawableRight="@drawable/stars"
-            android:paddingRight="70dp"
-            android:onClick="onTestClick"
-            android:text="Test"
-            android:textColor="@color/DeepPurple"
-            android:textSize="32dp"
-            android:textStyle="bold"
+            android:onClick="onMatchingClick"
             android:layout_weight="1"/>
 
         <Button
@@ -93,13 +75,13 @@
             android:layout_marginLeft="25dp"
             android:layout_marginTop="25dp"
             android:layout_marginRight="25dp"
-            android:layout_weight="1"
             android:textAllCaps="false"
+            android:layout_weight="1"
             android:background="@drawable/rounded_button_3"
-            android:onClick="onGameClick"
-            android:drawableRight="@drawable/game"
+            android:onClick="onAnagramClick"
+            android:drawableRight="@drawable/anagramicon"
             android:paddingRight="70dp"
-            android:text="Game"
+            android:text="Anagrams"
             android:textColor="@color/DeepPurple"
             android:textSize="32dp"
             android:textStyle="bold" />

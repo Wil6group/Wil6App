@@ -61,6 +61,10 @@ public class scroll_options extends AppCompatActivity implements NavigationView.
     {
         startActivity(new Intent(scroll_options.this, Behavior.class));
     }
+    public void onGamesClick(View view)
+    {
+        startActivity(new Intent(scroll_options.this, Games.class));
+    }
     //---Scroll options end
 
     @Override

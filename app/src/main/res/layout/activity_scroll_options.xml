@@ -201,7 +201,6 @@
                     android:orientation="horizontal"
                     android:layout_marginTop="15dp">
 
-
                     <ImageButton
                         android:id="@+id/button7"
                         android:layout_width="150dp"
@@ -212,6 +211,16 @@
                         android:scaleType="centerInside"
                         android:src="@drawable/behavior"
                         android:onClick="onBehaviorClick"/>
+
+                    <ImageButton
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:layout_marginLeft="25dp"
+                        android:background="@drawable/rounded_button_4"
+                        android:padding="10dp"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/game"
+                        android:onClick="onGamesClick"/>
 
                 </LinearLayout>
 
@@ -228,6 +237,16 @@
                         android:textColor="@color/Black"
                         android:layout_gravity="center_horizontal"
                         android:layout_marginLeft="50dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Games"
+                        android:textStyle="bold"
+                        android:textSize="30dp"
+                        android:textColor="@color/Black"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginLeft="75dp"/>
 
                 </LinearLayout>
 
