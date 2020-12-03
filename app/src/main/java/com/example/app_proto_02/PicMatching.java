@@ -3,6 +3,7 @@ package com.example.app_proto_02;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 
+import android.app.Application;
 import android.content.Intent;
 import android.graphics.drawable.AnimationDrawable;
 import android.os.Bundle;
@@ -12,6 +13,10 @@ import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
+
+import java.util.Timer;
+import java.util.TimerTask;
+import java.util.concurrent.TimeUnit;
 
 public class PicMatching extends AppCompatActivity { //Pic matching done by Shivaar. This Activity is in conjunction with ImageAdapter class.
 
@@ -44,7 +49,7 @@ public class PicMatching extends AppCompatActivity { //Pic matching done by Shiv
 
         gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+            public void onItemClick(AdapterView<?> parent, final View view, final int position, long id) {
                 if (currentPos<0)
                 {
                     currentPos = position;

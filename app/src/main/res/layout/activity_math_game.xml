@@ -1,140 +1,112 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     android:background="@drawable/bg3"
     android:foregroundTint="#FFFFFF"
     tools:context=".MathGame">
 
-
-    <Button
-        android:id="@+id/btnBack2"
-        android:layout_width="140dp"
-        android:layout_height="50dp"
-        android:layout_marginBottom="28dp"
-        android:background="@drawable/rounded_button_3"
-        android:onClick="onBackClick"
-        android:text="Back"
-        android:textAllCaps="false"
-        android:textColor="@color/DeepPurple"
-        android:textSize="24dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/progressBar" />
-
-    <Button
-        android:id="@+id/CompleteBtn"
-        android:layout_width="200dp"
-        android:layout_height="50dp"
-        android:layout_marginBottom="65dp"
-        android:background="@drawable/rounded_button_3"
-        android:onClick="ValidateAnswer"
-        android:text="Submit Answer"
-        android:textAllCaps="false"
-        android:textColor="@color/DeepPurple"
-        android:textSize="24dp"
-        app:layout_constraintBottom_toTopOf="@+id/progressBar"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/AnswerTxt" />
-
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="77dp"
-        android:layout_marginEnd="72dp"
-        android:layout_marginBottom="88dp"
-        android:text="Answer"
-        android:textColor="@color/Black"
-        android:textSize="24dp"
-        app:layout_constraintBottom_toTopOf="@+id/CompleteBtn"
-        app:layout_constraintEnd_toStartOf="@+id/AnswerTxt"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView3" />
-
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="22dp"
-        android:layout_marginEnd="293dp"
-        android:layout_marginBottom="79dp"
-        android:text="Question"
-        android:textColor="@color/Black"
-        android:textSize="24dp"
-        app:layout_constraintBottom_toTopOf="@+id/textView2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/OperationTxt" />
-
     <TextView
         android:id="@+id/OperationTxt"
-        android:layout_width="193dp"
+        android:layout_width="wrap_content"
         android:layout_height="40dp"
         android:layout_marginTop="65dp"
-        android:layout_marginBottom="69dp"
-        android:ems="10"
+        android:layout_gravity="center"
         android:enabled="false"
         android:inputType="textPersonName"
         android:text="Operation"
         android:textColor="@color/Black"
         android:textSize="30dp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/textView3"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="80dp"
+        android:gravity="center">
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="15dp"
+            android:text="Question"
+            android:textColor="@color/Black"
+            android:textSize="24dp" />
+
+        <TextView
+            android:id="@+id/QuestionTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:inputType="textPersonName"
+            android:textColor="@color/Black"
+            android:textSize="22dp" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:orientation="horizontal"
+        android:layout_marginTop="80dp"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/btnMath1"
+            android:layout_width="110dp"
+            android:layout_height="70dp"
+
+            android:layout_marginRight="20dp"
+            android:background="@drawable/rounded_button_3"
+            android:onClick="onFirstClick"
+            android:text="1"
+            android:textColor="@color/DeepPurple" />
+
+        <Button
+            android:id="@+id/btnMath2"
+            android:layout_width="110dp"
+            android:layout_height="70dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/rounded_button_3"
+            android:onClick="onSecondClick"
+            android:text="1"
+            android:textColor="@color/DeepPurple" />
+
+        <Button
+            android:id="@+id/btnMath3"
+            android:layout_width="110dp"
+            android:layout_height="70dp"
+            android:background="@drawable/rounded_button_3"
+            android:onClick="onThirdClick"
+            android:text="1"
+            android:textColor="@color/DeepPurple" />
+    </LinearLayout>
 
     <ProgressBar
         android:id="@+id/progressBar"
         style="?android:attr/progressBarStyleHorizontal"
         android:layout_width="219dp"
         android:layout_height="65dp"
-        android:layout_marginStart="96dp"
-        android:layout_marginEnd="96dp"
-        android:layout_marginBottom="67dp"
-        android:progressTint="@color/Green"
-        app:layout_constraintBottom_toTopOf="@+id/btnBack2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/CompleteBtn" />
-
-    <EditText
-        android:id="@+id/AnswerTxt"
-        android:layout_width="100dp"
-        android:layout_height="50dp"
-        android:layout_marginEnd="82dp"
-        android:layout_marginBottom="80dp"
-        android:background="@drawable/rounded_button_3"
-        android:ems="10"
-        android:inputType="number"
-        android:paddingLeft="10dp"
-        android:textColor="@color/DeepPurple"
-        android:textSize="22dp"
-        app:layout_constraintBottom_toTopOf="@+id/CompleteBtn"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textView2"
-        app:layout_constraintTop_toBottomOf="@+id/QuestionTxt" />
-
-    <TextView
-        android:id="@+id/QuestionTxt"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="18dp"
-        android:layout_marginTop="71dp"
-        android:layout_marginEnd="16dp"
+        android:layout_marginTop="80dp"
+        android:layout_gravity="center"
         android:layout_marginBottom="70dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:textColor="@color/Black"
-        android:textSize="22dp"
-        app:layout_constraintBottom_toTopOf="@+id/AnswerTxt"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textView3"
-        app:layout_constraintTop_toBottomOf="@+id/OperationTxt" />
+        android:progressTint="@color/Green" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <Button
+        android:id="@+id/btnBack2"
+        android:layout_width="140dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="30dp"
+        android:background="@drawable/rounded_button_3"
+        android:onClick="onBackClick"
+        android:text="Back"
+        android:textAllCaps="false"
+        android:textColor="@color/DeepPurple"
+        android:textSize="24dp" />
+
+
+</LinearLayout>

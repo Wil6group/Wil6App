@@ -12,6 +12,9 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
@@ -28,7 +31,7 @@ public class CameraActivity extends AppCompatActivity {
     String imageName;
 
     OutputStream outputStream;
-    
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -72,15 +75,25 @@ public class CameraActivity extends AppCompatActivity {
 
         imageName = imageName.substring(0, 1).toUpperCase() + imageName.substring(1).toLowerCase();
 
+        String uid = FirebaseAuth.getInstance().getCurrentUser().getUid().toString();
 
         File filepath = getExternalMediaDirs()[0];
-        File dir = new File(filepath.getAbsolutePath() + "/Demo/");
-        Toast.makeText(getApplicationContext(), (filepath.getAbsolutePath() + "/Demo/"), Toast.LENGTH_SHORT).show();
-        dir.mkdir();
-        File file = new File(dir, imageName + ".jpg");
+        String path = filepath.getAbsolutePath()  + "/Demo/" + uid + "/";
+        File dir = new File(path);
+        if (!dir.exists()){
+            dir.mkdirs();
+        }
+        //dir.mkdir();
+
         try {
+            File file = new File(dir, imageName + ".jpg");
+
+            if (file.exists()){
+                file.delete();
+            }
+            file.createNewFile();
             outputStream = new FileOutputStream(file);
-        } catch (FileNotFoundException e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
 

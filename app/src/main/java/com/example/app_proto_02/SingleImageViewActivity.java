@@ -17,6 +17,7 @@ import java.io.File;
 public class SingleImageViewActivity extends AppCompatActivity {
 
     Button backButton;
+    Button deleteButton;
     TextView caption;
     ImageView singleImage;
 
@@ -26,6 +27,7 @@ public class SingleImageViewActivity extends AppCompatActivity {
         setContentView(R.layout.activity_single_image_view);
 
         backButton = findViewById(R.id.btnSingleBack);
+        deleteButton = findViewById(R.id.btnPictureDelete);
         caption = findViewById(R.id.single_caption);
         singleImage = findViewById(R.id.imgSingle);
 
@@ -33,9 +35,9 @@ public class SingleImageViewActivity extends AppCompatActivity {
         String imageCaption = intent.getExtras().get("ImageCaption").toString();
         caption.setText(imageCaption);
 
-        String path = intent.getExtras().get("ImagePath").toString();
+        final String path = intent.getExtras().get("ImagePath").toString();
 
-        File imgFile = new  File(path);
+        final File imgFile = new  File(path);
 
         if(imgFile.exists()){
 
@@ -51,6 +53,15 @@ public class SingleImageViewActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Back();
+            }
+        });
+
+        deleteButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                imgFile.delete();
+                Back();
+                Toast.makeText(SingleImageViewActivity.this, "Image Deleted", Toast.LENGTH_SHORT).show();
             }
         });
     }

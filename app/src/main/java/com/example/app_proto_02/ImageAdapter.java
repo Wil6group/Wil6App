@@ -1,8 +1,10 @@
 package com.example.app_proto_02;
 
 import android.content.Context;
+import android.util.DisplayMetrics;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.WindowManager;
 import android.widget.BaseAdapter;
 import android.widget.GridView;
 import android.widget.ImageView;
@@ -36,8 +38,14 @@ public class ImageAdapter extends BaseAdapter {
         ImageView imageView;
         if (convertView == null)
         {
+            DisplayMetrics displaymetrics = new DisplayMetrics();
+            WindowManager wm = (WindowManager) context.getSystemService(Context.WINDOW_SERVICE);
+            wm.getDefaultDisplay().getMetrics((displaymetrics));
+            int screenWidth = displaymetrics.widthPixels;
+            int colDim = screenWidth / 4;
+
             imageView = new ImageView(this.context);
-            imageView.setLayoutParams(new GridView.LayoutParams(350,350));
+            imageView.setLayoutParams(new GridView.LayoutParams(colDim,colDim));
             imageView.setScaleType(ImageView.ScaleType.FIT_XY);
 
         }else imageView = (ImageView)convertView;

@@ -18,6 +18,9 @@ import androidx.core.app.ActivityCompat;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+
 import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
@@ -135,7 +138,12 @@ public class GalleryActivity extends AppCompatActivity {
     }
 
     private void loadImages(){
-        String path = getExternalMediaDirs()[0].getAbsolutePath() + "/Demo/";
+        FirebaseAuth mAuth;
+        mAuth = FirebaseAuth.getInstance();
+        FirebaseUser currentUser = mAuth.getCurrentUser();
+        String uid = currentUser.getUid();
+        String path = getExternalMediaDirs()[0].getAbsolutePath() + "/Demo/" + uid + "/";
+
         allFilesPaths = new ArrayList<>();
         allFilesPaths = listAllFiles(path);
 
