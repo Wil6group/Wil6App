@@ -4,45 +4,52 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Portal"
-    android:background="@drawable/bg3">
-
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="horizontal">
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Parent Portal"
-        android:textStyle="bold"
-        android:textSize="42dp"
-        android:textColor="@color/Black"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginLeft="5dp"/>
+    android:background="@drawable/bg3"
+    tools:context=".Portal">
 
     <Button
         android:id="@+id/Back"
         android:layout_width="150dp"
         android:layout_height="50dp"
+        android:layout_alignParentRight="true"
         android:background="@drawable/rounded_button_3"
+        android:onClick="onBackClick"
         android:text="Back"
-        android:textSize="24dp"
-        android:textStyle="bold"
         android:textAllCaps="false"
         android:textColor="@color/DeepPurple"
-        android:layout_marginTop="10dp"
-        android:layout_marginLeft="5dp"
-        android:layout_alignParentRight="true"
-        android:onClick="onBackClick"/>
+        android:layout_marginBottom="15dp"
+        android:textSize="24dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.976" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="5dp"
+            android:text="Parent Portal"
+            android:textColor="@color/Black"
+            android:textSize="42dp"
+            android:textStyle="bold" />
 
     </LinearLayout>
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:layout_marginTop="70dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -54,52 +61,52 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:gravity="center_horizontal">
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
 
             <Button
                 android:layout_width="300dp"
                 android:layout_height="50dp"
-                android:text="FaceBook Page"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/rounded_button_3"
                 android:onClick="onFaceBookClick"
-                android:background="@drawable/rounded_button_3"
-                android:textColor="@color/DeepPurple"
-                android:textSize="24dp"
+                android:text="FaceBook Page"
                 android:textAllCaps="false"
-                android:layout_marginTop="10dp"/>
+                android:textColor="@color/DeepPurple"
+                android:textSize="24dp" />
 
             <Button
                 android:layout_width="300dp"
                 android:layout_height="50dp"
-                android:text="WebPage"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/rounded_button_3"
                 android:onClick="onWebPageClick"
-                android:background="@drawable/rounded_button_3"
-                android:textColor="@color/DeepPurple"
-                android:textSize="24dp"
+                android:text="WebPage"
                 android:textAllCaps="false"
-                android:layout_marginTop="10dp"/>
+                android:textColor="@color/DeepPurple"
+                android:textSize="24dp" />
 
             <Button
                 android:layout_width="300dp"
                 android:layout_height="50dp"
-                android:text="Work Books"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/rounded_button_3"
                 android:onClick="onWorkBooksClick"
-                android:background="@drawable/rounded_button_3"
-                android:textColor="@color/DeepPurple"
-                android:textSize="24dp"
+                android:text="Work Books"
                 android:textAllCaps="false"
-                android:layout_marginTop="10dp"/>
+                android:textColor="@color/DeepPurple"
+                android:textSize="24dp" />
 
             <Button
                 android:layout_width="300dp"
                 android:layout_height="50dp"
-                android:text="Support Us"
-                android:onClick="onSupportClick"
+                android:layout_marginTop="10dp"
                 android:background="@drawable/rounded_button_3"
-                android:textColor="@color/DeepPurple"
-                android:textSize="24dp"
+                android:onClick="onSupportClick"
+                android:text="Support Us"
                 android:textAllCaps="false"
-                android:layout_marginTop="10dp"/>
+                android:textColor="@color/DeepPurple"
+                android:textSize="24dp" />
 
 
         </LinearLayout>

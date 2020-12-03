@@ -4,14 +4,32 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".animalsOptions"
-    android:background="@drawable/bg3">
+    android:background="@drawable/bg3"
+    tools:context=".animalsOptions">
+
+    <Button
+        android:id="@+id/Back"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:background="@drawable/rounded_button_3"
+        android:onClick="onBackClick"
+        android:text="Back"
+        android:textAllCaps="false"
+        android:layout_marginBottom="15dp"
+        android:textColor="@color/DeepPurple"
+        android:textSize="24dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.976" />
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -24,21 +42,6 @@
             android:text="Options"
             android:textColor="@color/Black"
             android:textSize="42dp"
-            android:textStyle="bold" />
-
-        <Button
-            android:id="@+id/Back"
-            android:layout_width="150dp"
-            android:layout_height="50dp"
-            android:layout_alignParentRight="true"
-            android:layout_marginLeft="50dp"
-            android:layout_marginTop="10dp"
-            android:background="@drawable/rounded_button_3"
-            android:onClick="onBackClick"
-            android:text="Back"
-            android:textAllCaps="false"
-            android:textColor="@color/DeepPurple"
-            android:textSize="24dp"
             android:textStyle="bold" />
 
     </LinearLayout>
@@ -62,16 +65,16 @@
             android:layout_height="150dp"
             android:layout_marginLeft="25dp"
             android:layout_marginRight="25dp"
+            android:layout_weight="1"
             android:background="@drawable/rounded_button_3"
-            android:onClick="onAnimalsClick"
-            android:text="Animals"
-            android:textColor="@color/DeepPurple"
             android:drawableRight="@drawable/paw"
+            android:onClick="onAnimalsClick"
             android:paddingRight="70dp"
-            android:textSize="32dp"
-            android:textStyle="bold"
+            android:text="Animals"
             android:textAllCaps="false"
-            android:layout_weight="1"/>
+            android:textColor="@color/DeepPurple"
+            android:textSize="32dp"
+            android:textStyle="bold" />
 
         <Button
             android:id="@+id/button4"
@@ -80,16 +83,16 @@
             android:layout_marginLeft="25dp"
             android:layout_marginTop="25dp"
             android:layout_marginRight="25dp"
+            android:layout_weight="1"
             android:background="@drawable/rounded_button_3"
-            android:onClick="onTestClick"
-            android:text="Test"
             android:drawableRight="@drawable/stars"
+            android:onClick="onTestClick"
             android:paddingRight="70dp"
+            android:text="Test"
+            android:textAllCaps="false"
             android:textColor="@color/DeepPurple"
             android:textSize="32dp"
-            android:textStyle="bold"
-            android:textAllCaps="false"
-            android:layout_weight="1"/>
+            android:textStyle="bold" />
 
         <Button
             android:id="@+id/button3"
@@ -98,16 +101,16 @@
             android:layout_marginLeft="25dp"
             android:layout_marginTop="25dp"
             android:layout_marginRight="25dp"
+            android:layout_weight="1"
             android:background="@drawable/rounded_button_3"
-            android:onClick="onAnimalGameClick"
-            android:text="Game"
             android:drawableRight="@drawable/game"
+            android:onClick="onAnimalGameClick"
             android:paddingRight="70dp"
+            android:text="Game"
+            android:textAllCaps="false"
             android:textColor="@color/DeepPurple"
             android:textSize="32dp"
-            android:textAllCaps="false"
-            android:textStyle="bold"
-            android:layout_weight="1"/>
+            android:textStyle="bold" />
 
     </LinearLayout>
 

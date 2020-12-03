@@ -4,46 +4,53 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".shapesOptions"
-    android:background="@drawable/bg3">
+    android:background="@drawable/bg3"
+    tools:context=".shapesOptions">
+
+    <Button
+        android:id="@+id/Back"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:background="@drawable/rounded_button_3"
+        android:onClick="onBackClick"
+        android:text="Back"
+        android:textAllCaps="false"
+        android:textColor="@color/DeepPurple"
+        android:layout_marginBottom="15dp"
+        android:textSize="24dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.976" />
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="horizontal">
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Shapes"
-            android:textStyle="bold"
-            android:textSize="42dp"
-            android:textColor="@color/Black"
             android:layout_gravity="center_horizontal"
-            android:layout_marginLeft="40dp"/>
-
-        <Button
-            android:id="@+id/Back"
-            android:layout_width="150dp"
-            android:layout_height="50dp"
-            android:background="@drawable/rounded_button_3"
-            android:text="Back"
-            android:textAllCaps="false"
-            android:textSize="24dp"
-            android:textStyle="bold"
-            android:textColor="@color/DeepPurple"
-            android:layout_marginTop="10dp"
-            android:layout_marginLeft="50dp"
-            android:layout_alignParentRight="true"
-            android:onClick="onBackClick"/>
+            android:layout_marginLeft="40dp"
+            android:text="Shapes"
+            android:textColor="@color/Black"
+            android:textSize="42dp"
+            android:textStyle="bold" />
 
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
         android:layout_marginTop="80dp"
+        android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -55,18 +62,18 @@
             android:id="@+id/button1"
             android:layout_width="match_parent"
             android:layout_height="150dp"
-            android:background="@drawable/rounded_button_3"
-            android:text="Shapes"
-            android:textAllCaps="false"
-            android:textSize="32dp"
-            android:textStyle="bold"
-            android:drawableRight="@drawable/shape"
-            android:paddingRight="70dp"
-            android:textColor="@color/DeepPurple"
             android:layout_marginLeft="25dp"
             android:layout_marginRight="25dp"
+            android:layout_weight="1"
+            android:background="@drawable/rounded_button_3"
+            android:drawableRight="@drawable/shape"
             android:onClick="onShapesClick"
-            android:layout_weight="1"/>
+            android:paddingRight="70dp"
+            android:text="Shapes"
+            android:textAllCaps="false"
+            android:textColor="@color/DeepPurple"
+            android:textSize="32dp"
+            android:textStyle="bold" />
 
         <Button
             android:id="@+id/button4"
@@ -75,16 +82,16 @@
             android:layout_marginLeft="25dp"
             android:layout_marginTop="25dp"
             android:layout_marginRight="25dp"
+            android:layout_weight="1"
             android:background="@drawable/rounded_button_3"
             android:drawableRight="@drawable/stars"
-            android:paddingRight="70dp"
             android:onClick="onShapesTestClick"
+            android:paddingRight="70dp"
             android:text="Test"
             android:textAllCaps="false"
             android:textColor="@color/DeepPurple"
             android:textSize="32dp"
-            android:textStyle="bold"
-            android:layout_weight="1"/>
+            android:textStyle="bold" />
 
         <Button
             android:id="@+id/button3"
@@ -93,16 +100,16 @@
             android:layout_marginLeft="25dp"
             android:layout_marginTop="25dp"
             android:layout_marginRight="25dp"
+            android:layout_weight="1"
             android:background="@drawable/rounded_button_3"
-            android:onClick="onShapeGameClick"
-            android:textAllCaps="false"
             android:drawableRight="@drawable/game"
+            android:onClick="onShapeGameClick"
             android:paddingRight="70dp"
             android:text="Game"
+            android:textAllCaps="false"
             android:textColor="@color/DeepPurple"
             android:textSize="32dp"
-            android:textStyle="bold"
-            android:layout_weight="1"/>
+            android:textStyle="bold" />
 
     </LinearLayout>
 
