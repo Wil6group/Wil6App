@@ -26,7 +26,6 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="177dp"
         android:text="Real Life Shapes"
         android:textColor="@color/Black"
         android:textSize="30sp"
