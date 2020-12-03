@@ -169,7 +169,7 @@ public class TestAnagram extends AppCompatActivity {
     public void setBodyPics()
     {
         dictionary[0] = "arm";
-        dictionary[1] = "hand";
+        dictionary[1] = "handtest";
         dictionary[2] = "leg";
         dictionary[3] = "foot";
         dictionary[4] = "head";
