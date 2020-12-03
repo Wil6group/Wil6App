@@ -9,6 +9,7 @@ import android.graphics.drawable.AnimationDrawable;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.Chronometer;
 import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
@@ -24,6 +25,8 @@ public class PicMatching extends AppCompatActivity { //Pic matching done by Shiv
     ImageView curView = null;
     private int countPair = 0;
     final int[] drawable = new int[8];
+    private Chronometer chrom;
+    private boolean running;
 
     int[] pos = {0,1,2,3,4,5,6,7,0,1,2,3,4,5,6,7};
     int currentPos = -1;
@@ -46,10 +49,12 @@ public class PicMatching extends AppCompatActivity { //Pic matching done by Shiv
         GridView gridView = (GridView) findViewById(R.id.gridView);
         ImageAdapter imageAdapter = new ImageAdapter(this);
         gridView.setAdapter(imageAdapter);
+        chrom = findViewById(R.id.simpleChronometer);
 
         gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, final View view, final int position, long id) {
+                startTimer(chrom);
                 if (currentPos<0)
                 {
                     currentPos = position;
@@ -69,8 +74,9 @@ public class PicMatching extends AppCompatActivity { //Pic matching done by Shiv
                                     ((ImageView)view).setImageResource(drawable[pos[position]]);
                                     countPair++;
 
-                                    if (countPair==0)
+                                    if (countPair==8)
                                     {
+                                        pauseTimer(chrom);
                                         Toast.makeText(PicMatching.this, "You Win!", Toast.LENGTH_SHORT).show();
                                     }
                                 }
@@ -120,5 +126,20 @@ public class PicMatching extends AppCompatActivity { //Pic matching done by Shiv
         drawable[5] = R.drawable.matchsquare;
         drawable[6] = R.drawable.matchstar;
         drawable[7] = R.drawable.matchtri;
+    }
+
+    public void startTimer(View view) {
+
+        if(!running){
+            chrom.start();
+            running = true;
+        }
+    }
+
+    public void pauseTimer(View view) {
+        if(running){
+            chrom.stop();
+            running = false;
+        }
     }
 }
