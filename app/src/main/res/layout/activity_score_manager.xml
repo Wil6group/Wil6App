@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/bg3"
+    tools:context=".ScoreManager">
+
+    <TextView
+        android:id="@+id/txtSection"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
+        android:layout_marginTop="20dp"
+        android:text="Section"
+        android:textColor="@color/Black"
+        android:textSize="42dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/txtGame"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:text="Game"
+        android:textColor="@color/Black"
+        android:textSize="36dp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/imgStar"
+        android:layout_width="match_parent"
+        android:layout_marginTop="50dp"
+        android:layout_height="300dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginEnd="60dp"
+        android:layout_marginBottom="35dp"
+        android:background="@drawable/rounded_button_3"
+        android:padding="10dp"
+        android:scaleType="centerInside"
+        app:srcCompat="@drawable/headtest" />
+
+    <Button
+        android:id="@+id/back"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp"
+        android:onClick="onHomeClick"
+        android:background="@drawable/rounded_button_3"
+        android:text="Home"
+        android:textColor="@color/DeepPurple"
+        android:textSize="24dp"
+        android:textAllCaps="false"
+        android:textStyle="bold" />
+
+</LinearLayout>

@@ -9,12 +9,17 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 import java.util.Random;
 
 public class shapesTest extends AppCompatActivity {
 
     int[] shapesImageList = new int[]{R.drawable.circletest, R.drawable.diamondtest, R.drawable.hearttest, R.drawable.ovaltest, R.drawable.rectangletest, R.drawable.squaretest, R.drawable.startest, R.drawable.triangletest};
     String[] shapesNameList = new String[]{"CIRCLE","DIAMOND","HEART","OVAL","RECTANGLE","SQUARE","STAR","TRIANGLE","PENTAGON","HEXAGON"};
+    List<Button> buttonList = new ArrayList<>();
+    List<String> answerList = new ArrayList<>();
 
     ImageView question;
     Button b1,b2,b3;
@@ -23,12 +28,31 @@ public class shapesTest extends AppCompatActivity {
     int answerPos;
     String answerWord, userAnswer;
 
+    int currentQuestion, score;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_shapes_test);
 
         initializeComponents();
+
+        Random rand = new Random();
+        for (int i = 0; i < shapesImageList.length; i++) {
+            int randomIndexToSwap = rand.nextInt(shapesImageList.length);
+
+            int temp = shapesImageList[randomIndexToSwap];
+            shapesImageList[randomIndexToSwap] = shapesImageList[i];
+            shapesImageList[i] = temp;
+
+            String temp2 = shapesNameList[randomIndexToSwap];
+            shapesNameList[randomIndexToSwap] = shapesNameList[i];
+            shapesNameList[i] = temp2;
+        }
+
+        answerList.clear();
+        currentQuestion = 1;
+        score = 0;
         getQuestion();
     }
 
@@ -37,19 +61,19 @@ public class shapesTest extends AppCompatActivity {
         startActivity(new Intent(shapesTest.this, shapesOptions.class));
     }
 
-    public void onFirstClick(View view)//users picks this answer
+    public void onFirstShapeClick(View view)//users picks this answer
     {
         userAnswer = b1.getText().toString();
         checkAnswer(userAnswer);
     }
 
-    public void onSecondClick(View view)//users picks this answer
+    public void onSecondShapeClick(View view)//users picks this answer
     {
         userAnswer = b2.getText().toString();
         checkAnswer(userAnswer);
     }
 
-    public void onThirdClick(View view)//users picks this answer
+    public void onThirdShapeClick(View view)//users picks this answer
     {
         userAnswer = b3.getText().toString();
         checkAnswer(userAnswer);
@@ -57,53 +81,83 @@ public class shapesTest extends AppCompatActivity {
 
     public int randNum()//gets random number
     {
-        int random = new Random().nextInt((max - min) + 1) + min;
+        int random = new Random().nextInt(3);
         return random;
     }
 
     public void getQuestion()//gets next answer and question
     {
-        int randAns = new Random().nextInt((3 - 1) + 1) + 1;
-        answerPos = randNum();
-        answerWord = shapesNameList[answerPos];
+        if (currentQuestion < shapesImageList.length + 1) {
+            Random randAns = new Random();
+            answerList.clear();
 
-        question.setImageResource(shapesImageList[answerPos]);
+            question.setImageResource(shapesImageList[currentQuestion-1]);
 
-        if (randAns == 1)
-        {
-            b1.setText(shapesNameList[answerPos]);
-            b2.setText(shapesNameList[answerPos+1]);
-            b3.setText(shapesNameList[answerPos+2]);
-        }else if (randAns == 2)
-        {
-            b1.setText(shapesNameList[answerPos+1]);
-            b2.setText(shapesNameList[answerPos]);
-            b3.setText(shapesNameList[answerPos+2]);
-        }else
-        {
-            b1.setText(shapesNameList[answerPos+1]);
-            b2.setText(shapesNameList[answerPos+2]);
-            b3.setText(shapesNameList[answerPos]);
+            String ans = shapesNameList[currentQuestion-1];
+
+            for (int i = 0; i < 3; i++) {
+                while (answerList.contains(ans)){
+                    answerPos = randAns.nextInt(shapesNameList.length);
+                    ans = shapesNameList[answerPos];
+                }
+                answerList.add(ans);
+            }
+
+            for (int i = 0; i < buttonList.size(); i++){
+                buttonList.get(i).setText(answerList.get(i));
+            }
+
+            int n = buttonList.size();
+
+            for (int k = n-1; k > 0; k--) {
+
+                // Pick a random index from 0 to k
+                int j = randAns.nextInt(k);
+
+                // Swap arr[i] with the element at random index
+                String value = buttonList.get(k).getText().toString();
+                buttonList.get(k).setText(buttonList.get(j).getText().toString());
+                buttonList.get(j).setText(value);
+            }
+
+        } else {
+            EndGame();
         }
+    }
+
+    public void EndGame(){
+        Intent intent = new Intent(shapesTest.this, ScoreManager.class);
+        intent.putExtra("Section", "Shapes");
+        intent.putExtra("Game", "Quiz");
+        intent.putExtra("UserScore", score);
+        intent.putExtra("TotalScore", shapesImageList.length);
+        startActivity(intent);
     }
 
     public void checkAnswer(String ans)//validates users answer then displays another question if correct
     {
-        if (ans.equals(shapesNameList[answerPos]))
+        if (ans.equalsIgnoreCase(answerList.get(0).trim()))
         {
             Toast.makeText(this, "Correct answer!", Toast.LENGTH_SHORT).show();
-            getQuestion();
-        }else
+            score++;
+        } else
         {
             Toast.makeText(this, "Incorrect answer try again!", Toast.LENGTH_SHORT).show();
         }
+
+        currentQuestion++;
+        getQuestion();
     }
 
     public void initializeComponents()//initializes components
     {
         question = findViewById(R.id.imgQuestion);
-        b1 = findViewById(R.id.btn1);
-        b2 = findViewById(R.id.btn2);
-        b3 = findViewById(R.id.btn3);
+        b1 = findViewById(R.id.btnS1);
+        b2 = findViewById(R.id.btnS2);
+        b3 = findViewById(R.id.btnS3);
+
+        buttonList.add(b1);
+        buttonList.add(b2);
+        buttonList.add(b3);
     }
 }

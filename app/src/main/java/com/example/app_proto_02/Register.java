@@ -81,8 +81,9 @@ public class Register extends AppCompatActivity {
                             {
                                 User fbUser = new User(user.getText().toString(), email.getText().toString()); //Adds new user to database
                                 FirebaseDatabase database = FirebaseDatabase.getInstance();
-                                DatabaseReference myRef = database.getReference("Users");
-                                myRef.child(FirebaseAuth.getInstance().getCurrentUser().getUid()).setValue(fbUser).addOnCompleteListener(new OnCompleteListener<Void>() {
+                                DatabaseReference myRef = database.getReference(FirebaseAuth.getInstance().getCurrentUser().getUid());
+                                myRef.child("Scores").setValue(new Score("Control", "Control", 0, 0));
+                                myRef.child("User").setValue(fbUser).addOnCompleteListener(new OnCompleteListener<Void>() {
                                     @Override
                                     public void onComplete(@NonNull Task<Void> task) {
                                         if (task.isSuccessful())

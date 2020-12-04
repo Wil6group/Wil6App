@@ -7,20 +7,102 @@
     android:background="@drawable/bg3"
     tools:context=".bodyTest">
 
-    <Button
-        android:id="@+id/btn3"
-        android:layout_width="110dp"
-        android:layout_height="70dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="235dp"
-        android:textColor="@color/DeepPurple"
-        android:background="@drawable/rounded_button_3"
-        android:onClick="onThirdClick"
-        android:text="HEAD"
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="14dp"
+        android:layout_marginBottom="63dp"
+        android:text="Animals Test"
+        android:textColor="@color/Black"
+        android:textSize="42dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/imgQuestion"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="What is the animal?"
+        android:textColor="@color/Black"
+        android:textSize="32dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/btn2"
-        app:layout_constraintTop_toBottomOf="@+id/imgQuestion" />
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.103" />
+
+
+
+
+
+    <ImageView
+        android:id="@+id/imgQuestion"
+        android:layout_width="269dp"
+        android:layout_height="257dp"
+        android:layout_marginStart="71dp"
+        android:layout_marginEnd="71dp"
+        android:layout_marginBottom="35dp"
+        android:background="@drawable/rounded_button_3"
+        android:padding="10dp"
+        android:scaleType="centerInside"
+        app:layout_constraintBottom_toTopOf="@+id/linLayoutCol"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView5"
+        app:srcCompat="@drawable/headtest" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/linLayoutCol"
+        android:gravity="center"
+        android:layout_marginBottom="60dp"
+        app:layout_constraintBottom_toTopOf="@+id/back"
+        app:layout_constraintTop_toBottomOf="@+id/imgQuestion"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <Button
+            android:id="@+id/btnB1"
+            android:layout_width="110dp"
+            android:layout_height="70dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/rounded_button_3"
+            android:onClick="onFirstBodyClick"
+            android:text="Animal 1"
+            android:textColor="@color/DeepPurple"/>
+
+        <Button
+            android:id="@+id/btnB2"
+            android:layout_width="110dp"
+            android:layout_height="70dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/rounded_button_3"
+            android:onClick="onSecondBodyClick"
+            android:text="Animal 2"
+            android:textColor="@color/DeepPurple"/>
+
+        <Button
+            android:id="@+id/btnB3"
+            android:layout_width="110dp"
+            android:layout_height="70dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/rounded_button_3"
+            android:onClick="onThirdBodyClick"
+            android:text="Animal 2"
+            android:textColor="@color/DeepPurple"/>
+
+    </LinearLayout>
 
     <Button
         android:id="@+id/back"
@@ -33,94 +115,14 @@
         android:background="@drawable/rounded_button_3"
         android:onClick="onBackClick"
         android:text="Back"
-        android:textColor="@color/DeepPurple"
-        android:textSize="24dp"
         android:textAllCaps="false"
+        android:textColor="@color/DeepPurple"
+        android:textSize="25dp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn1" />
+        app:layout_constraintTop_toBottomOf="@+id/linLayoutCol" />
 
-    <TextView
-        android:id="@+id/textView5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="14dp"
-        android:layout_marginBottom="63dp"
-        android:text="Body Test"
-        android:textColor="@color/Black"
-        android:textSize="42dp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/imgQuestion"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <ImageView
-        android:id="@+id/imgQuestion"
-        android:layout_width="269dp"
-        android:layout_height="257dp"
-        android:layout_marginStart="71dp"
-        android:layout_marginEnd="71dp"
-        android:layout_marginBottom="35dp"
-        android:background="@drawable/rounded_button_3"
-        android:padding="10dp"
-        android:scaleType="centerInside"
-        app:layout_constraintBottom_toTopOf="@+id/btn3"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView5"
-        app:srcCompat="@drawable/headtest" />
-
-    <TextView
-        android:id="@+id/tv_info"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:text="What is the body part?"
-        android:textColor="@color/Black"
-        android:textSize="32dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.103" />
-
-    <Button
-        android:id="@+id/btn1"
-        android:layout_width="110dp"
-        android:layout_height="70dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="36dp"
-        android:layout_marginEnd="24dp"
-        android:layout_marginBottom="172dp"
-        android:textColor="@color/DeepPurple"
-        android:background="@drawable/rounded_button_3"
-        android:onClick="onFirstClick"
-        android:text="HEAD"
-        app:layout_constraintBottom_toTopOf="@+id/back"
-        app:layout_constraintEnd_toStartOf="@+id/btn2"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imgQuestion" />
-
-    <Button
-        android:id="@+id/btn2"
-        android:layout_width="110dp"
-        android:layout_height="70dp"
-        android:layout_marginTop="36dp"
-        android:layout_marginEnd="25dp"
-        android:layout_marginBottom="172dp"
-        android:textColor="@color/DeepPurple"
-        android:background="@drawable/rounded_button_3"
-        android:onClick="onSecondClick"
-        android:text="HEAD"
-        app:layout_constraintBottom_toTopOf="@+id/back"
-        app:layout_constraintEnd_toStartOf="@+id/btn3"
-        app:layout_constraintStart_toEndOf="@+id/btn1"
-        app:layout_constraintTop_toBottomOf="@+id/imgQuestion" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -97,7 +97,7 @@ public class CameraActivity extends AppCompatActivity {
             e.printStackTrace();
         }
 
-        bitmap.compress(Bitmap.CompressFormat.PNG, 100, outputStream);
+        bitmap.compress(Bitmap.CompressFormat.JPEG, 100, outputStream);
         Toast.makeText(getApplicationContext(), "Image Saved", Toast.LENGTH_SHORT).show();
 
 

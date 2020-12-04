@@ -10,7 +10,9 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
@@ -18,7 +20,7 @@ import java.util.Random;
 //Done by Sagel.
 public class TestAnagram extends AppCompatActivity {
 
-    TextView tv_info, tv_word;
+    TextView tv_info, tv_word, tv_num;
 
     EditText et_guess;
 
@@ -27,15 +29,18 @@ public class TestAnagram extends AppCompatActivity {
     Random r;
 
     String currentWord,choice;
+    int score, totalQuestions, currentQuestion;
+
 //Dictionary function used for the words, more can be added.
-    String[] dictionary = {"", "", "", "", "", "", "", ""};
+    List<String> dictionary = new ArrayList<>();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_test_anagram);
 
         tv_info = (TextView) findViewById(R.id.tv_info);
-        tv_word = (TextView) findViewById(R.id.tv_word);
+        tv_word = (TextView) findViewById(R.id.textView3);
+        tv_num = (TextView) findViewById(R.id.questionNum);
 
         et_guess = (EditText) findViewById(R.id.et_guess);
 
@@ -43,6 +48,7 @@ public class TestAnagram extends AppCompatActivity {
 
         Intent intent = getIntent();
         choice = intent.getStringExtra("ID");
+        dictionary.clear();;
         if (choice.equals("Animals"))
         {
             setAniPics();
@@ -60,23 +66,37 @@ public class TestAnagram extends AppCompatActivity {
             setBodyPics();
         }
 
-
+        Collections.shuffle(dictionary);
 
         r = new Random();
+
+        score = 0;
+        currentQuestion = 1;
+        totalQuestions = dictionary.size();
 
         newGame();
 
         b_check.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v){
-                if(et_guess.getText().toString().equalsIgnoreCase(currentWord)){
-                    tv_info.setText("Awesome");
-                    b_check.setEnabled(false);
-                    newGame();
-                } else{
-                    tv_info.setText("Try again");
-                    et_guess.setText("");
+                String guess = et_guess.getText().toString();
+                if (guess.isEmpty()){
+                    Toast.makeText(TestAnagram.this, "Please enter an answer", Toast.LENGTH_SHORT).show();
+                    et_guess.requestFocus();
+                    return;
                 }
+
+                if(guess.equalsIgnoreCase(currentWord)){
+                    Toast.makeText(TestAnagram.this, "Awesome", Toast.LENGTH_SHORT).show();
+                    b_check.setEnabled(false);
+                    score++;
+                } else {
+                    Toast.makeText(TestAnagram.this, "Unlucky", Toast.LENGTH_SHORT).show();
+                }
+
+                et_guess.setText("");
+                currentQuestion++;
+                newGame();
             }
         });
 
@@ -93,13 +113,26 @@ public class TestAnagram extends AppCompatActivity {
     }
 
     private void newGame(){
-        currentWord = dictionary[r.nextInt(dictionary.length)];
+        if (currentQuestion < totalQuestions + 1) {
+            tv_num.setText("Question " + currentQuestion);
+            currentWord = dictionary.get(currentQuestion-1);
+            tv_word.setText(shuffleWord(currentWord));
+            et_guess.setText("");
+            b_check.setEnabled(true);
+        } else {
+            EndGame();
+        }
+    }
 
-        tv_word.setText(shuffleWord(currentWord));
-
-        et_guess.setText("");
-
-        b_check.setEnabled(true);
+    public void EndGame(){
+        Intent intent = new Intent(TestAnagram.this, ScoreManager.class);
+        if (choice.lastIndexOf("1") != -1) {
+            intent.putExtra("Section", choice.substring(0, choice.length()-1));
+        }
+        intent.putExtra("Game", "Anagram");
+        intent.putExtra("UserScore", score);
+        intent.putExtra("TotalScore", totalQuestions);
+        startActivity(intent);
     }
 
     public void onBackClick(View view)
@@ -124,57 +157,62 @@ public class TestAnagram extends AppCompatActivity {
 
     public void setNumberPics()
     {
-        dictionary[0] = "one";
-        dictionary[1] = "two";
-        dictionary[2] = "three";
-        dictionary[3] = "four";
-        dictionary[4] = "five";
-        dictionary[5] = "six";
-        dictionary[6] = "seven";
-        dictionary[7] = "eight";
+        dictionary.add("one");
+        dictionary.add("two");
+        dictionary.add("three");
+        dictionary.add("four");
+        dictionary.add("five");
+        dictionary.add("six");
+        dictionary.add("seven");
+        dictionary.add("eight");
+        dictionary.add("nine");
+        dictionary.add("ten");
     }
     public void setColourPics()
     {
-        dictionary[0] = "blue";
-        dictionary[1] = "red";
-        dictionary[2] = "orange";
-        dictionary[3] = "yellow";
-        dictionary[4] = "green";
-        dictionary[5] = "purple";
-        dictionary[6] = "brown";
-        dictionary[7] = "grey";
+        dictionary.add("blue");
+        dictionary.add("red");
+        dictionary.add("green");
+        dictionary.add("yellow");
+        dictionary.add("orange");
+        dictionary.add("pink");
+        dictionary.add("purple");
+        dictionary.add("black");
+        dictionary.add("grey");
+        dictionary.add("brown");
     }
     public void setShapePics()
     {
-        dictionary[0] = "square";
-        dictionary[1] = "circle";
-        dictionary[2] = "triangle";
-        dictionary[3] = "star";
-        dictionary[4] = "rectangle";
-        dictionary[5] = "diamond";
-        dictionary[6] = "oval";
-        dictionary[7] = "heart";
+        dictionary.add("circle");
+        dictionary.add("diamond");
+        dictionary.add("heart");
+        dictionary.add("oval");
+        dictionary.add("rectangle");
+        dictionary.add("square");
+        dictionary.add("star");
+        dictionary.add("triangle");
     }
     public void setAniPics()
     {
-        dictionary[0] = "dog";
-        dictionary[1] = "cat";
-        dictionary[2] = "bee";
-        dictionary[3] = "bird";
-        dictionary[4] = "chicken";
-        dictionary[5] = "fish";
-        dictionary[6] = "sheep";
-        dictionary[7] = "butterfly";
+        dictionary.add("bee");
+        dictionary.add("bird");
+        dictionary.add("cat");
+        dictionary.add("dog");
+        dictionary.add("chicken");
+        dictionary.add("fish");
+        dictionary.add("sheep");
+        dictionary.add("butterfly");
     }
     public void setBodyPics()
     {
-        dictionary[0] = "arm";
-        dictionary[1] = "handtest";
-        dictionary[2] = "leg";
-        dictionary[3] = "foot";
-        dictionary[4] = "head";
-        dictionary[5] = "chest";
-        dictionary[6] = "stomach";
-        dictionary[7] = "finger";
+        dictionary.add("head");
+        dictionary.add("neck");
+        dictionary.add("arm");
+        dictionary.add("hand");
+        dictionary.add("chest");
+        dictionary.add("stomach");
+        dictionary.add("leg");
+        dictionary.add("knee");
+        dictionary.add("foot");
     }
 }

@@ -7,20 +7,21 @@
     android:background="@drawable/bg3"
     tools:context=".colourTest">
 
-    <Button
-        android:id="@+id/btn3Colour"
-        android:layout_width="110dp"
-        android:layout_height="70dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="235dp"
-        android:textColor="@color/DeepPurple"
-        android:background="@drawable/rounded_button_3"
-        android:onClick="onThirdClick"
-        android:text="COLOUR"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="14dp"
+        android:layout_marginBottom="63dp"
+        android:text="Animals Test"
+        android:textColor="@color/Black"
+        android:textSize="42dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/imgQuestion"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/btn2Colour"
-        app:layout_constraintTop_toBottomOf="@+id/imgQuestion" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/tv_info"
@@ -28,7 +29,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:text="What is the colour?"
+        android:layout_marginTop="20dp"
+        android:text="What is the animal?"
         android:textColor="@color/Black"
         android:textSize="32dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -37,42 +39,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.103" />
-
-    <Button
-        android:id="@+id/back"
-        android:layout_width="150dp"
-        android:layout_height="50dp"
-        android:layout_alignParentRight="true"
-        android:layout_marginStart="28dp"
-        android:layout_marginEnd="28dp"
-        android:layout_marginBottom="15dp"
-        android:background="@drawable/rounded_button_3"
-        android:onClick="onBackClick"
-        android:textAllCaps="false"
-        android:text="Back"
-        android:textColor="@color/DeepPurple"
-        android:textSize="24dp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn1" />
-
-    <TextView
-        android:id="@+id/textView5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="14dp"
-        android:layout_marginBottom="63dp"
-        android:text="Colours Test"
-        android:textColor="@color/Black"
-        android:textSize="42dp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/imgQuestion"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/imgQuestion"
@@ -84,43 +50,75 @@
         android:background="@drawable/rounded_button_3"
         android:padding="10dp"
         android:scaleType="centerInside"
-        app:layout_constraintBottom_toTopOf="@+id/btn3Colour"
+        app:layout_constraintBottom_toTopOf="@+id/linLayoutCol"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView5"
-        app:srcCompat="@drawable/browntest" />
+        app:srcCompat="@drawable/butterfly" />
 
-    <Button
-        android:id="@+id/btn1Colour"
-        android:layout_width="110dp"
-        android:layout_height="70dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="36dp"
-        android:layout_marginEnd="24dp"
-        android:layout_marginBottom="172dp"
-        android:textColor="@color/DeepPurple"
-        android:background="@drawable/rounded_button_3"
-        android:onClick="onFirstClick"
-        android:text="COLOUR"
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/linLayoutCol"
+        android:gravity="center"
+        android:layout_marginBottom="60dp"
         app:layout_constraintBottom_toTopOf="@+id/back"
-        app:layout_constraintEnd_toStartOf="@+id/btn2Colour"
+        app:layout_constraintTop_toBottomOf="@+id/imgQuestion"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imgQuestion" />
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <Button
+            android:id="@+id/btnC1"
+            android:layout_width="110dp"
+            android:layout_height="70dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/rounded_button_3"
+            android:onClick="onFirstColClick"
+            android:text="Animal 1"
+            android:textColor="@color/DeepPurple"/>
+
+        <Button
+            android:id="@+id/btnC2"
+            android:layout_width="110dp"
+            android:layout_height="70dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/rounded_button_3"
+            android:onClick="onSecondColClick"
+            android:text="Animal 2"
+            android:textColor="@color/DeepPurple"/>
+
+        <Button
+            android:id="@+id/btnC3"
+            android:layout_width="110dp"
+            android:layout_height="70dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/rounded_button_3"
+            android:onClick="onThirdColClick"
+            android:text="Animal 2"
+            android:textColor="@color/DeepPurple"/>
+
+    </LinearLayout>
 
     <Button
-        android:id="@+id/btn2Colour"
-        android:layout_width="110dp"
-        android:layout_height="70dp"
-        android:layout_marginTop="36dp"
-        android:layout_marginEnd="25dp"
-        android:layout_marginBottom="172dp"
-        android:textColor="@color/DeepPurple"
+        android:id="@+id/back"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginStart="28dp"
+        android:layout_marginEnd="28dp"
+        android:layout_marginBottom="15dp"
         android:background="@drawable/rounded_button_3"
-        android:onClick="onSecondClick"
-        android:text="COLOUR"
-        app:layout_constraintBottom_toTopOf="@+id/back"
-        app:layout_constraintEnd_toStartOf="@+id/btn3Colour"
-        app:layout_constraintStart_toEndOf="@+id/btn1Colour"
-        app:layout_constraintTop_toBottomOf="@+id/imgQuestion" />
+        android:onClick="onBackClick"
+        android:text="Back"
+        android:textAllCaps="false"
+        android:textColor="@color/DeepPurple"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linLayoutCol" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
